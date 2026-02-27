@@ -14,14 +14,14 @@ const FAQSection: React.FC = () => {
   const faqs = language === 'slo' ? [
     { q: 'Ali je ta formula varna in certificirana?', a: 'Da. Proizvedeno v EU v obratu z GMP, ISO 22000 in FSSC certifikati, z natančno laboratorijsko preverjenimi sestavinami.' },
     { q: 'Zakaj ta izdelek ne obljublja "hitrega detoksa"?', a: 'Ajurvedska filozofija (in EU znanost) se strinjata: hitri diuretiki in odvajala telo le obremenijo. Naša formula nudi dolgoročno, kumulativno in nežno podporo presnovi in ravnovesju.' },
-    { q: 'Ali izdelek vsebuje alergene?', a: 'Kapsule so primerne za vegetarijance, vendar pa zaradi vključitve celotnega spektra naravnih zelišč za prebavo vsebujejo naravno zeleno (celery), kar skrbno transparentno navajamo.' },
+    { q: 'Ali izdelek vsebuje alergene?', a: 'Kapsule so primerne za vegane, vendar pa zaradi vključitve celotnega spektra naravnih zelišč za prebavo vsebujejo naravno zeleno (celery), kar skrbno transparentno navajamo.' },
     { q: 'Kako dolgo traja dostava v tujino?', a: 'Dostava preko GLS partnerja traja običajno od 1 do 6 delovnih dni od dneva odpreme.' },
     { q: 'Ali je Heparbion Plus primeren za dolgotrajno vsakodnevno jemanje?', a: 'Absolutno. Ne vsebuje megadoz posameznih izoliranih snovi, temveč sinergijo zelišč (kot so ingver, sladki koren in amalaki), ki so zasnovana prav za varno vsakodnevno rutino.' },
     { q: 'Kako dolgo traja ena steklenička?', a: 'Ena steklenička vsebuje 120 kapsul. Pri priporočenem odmerku 2 kapsuli na dan zadošča za 60 dni (2 meseca).' },
   ] : [
     { q: 'Is this formula safe and certified?', a: 'Yes. Manufactured in the EU in a facility with GMP, ISO 22000, and FSSC certifications, with precisely lab-verified ingredients.' },
     { q: 'Why doesn\'t this product promise a "quick detox"?', a: 'Ayurvedic philosophy (and EU science) agree: fast diuretics and laxatives only burden the body. Our formula offers long-term, cumulative, and gentle metabolic and balance support.' },
-    { q: 'Does the product contain allergens?', a: 'The capsules are suitable for vegetarians, but due to the full-spectrum natural digestive herbs, they contain natural celery, which we transparently declare.' },
+    { q: 'Does the product contain allergens?', a: 'The capsules are suitable for vegans, but due to the full-spectrum natural digestive herbs, they contain natural celery, which we transparently declare.' },
     { q: 'How long does international delivery take?', a: 'Delivery via our GLS partner typically takes 1 to 6 business days from the date of dispatch.' },
     { q: 'Is Heparbion Plus suitable for long-term daily use?', a: 'Absolutely. It doesn\'t contain megadoses of isolated compounds, but rather a synergy of herbs (such as ginger, licorice root, and amalaki) designed for safe daily routine.' },
     { q: 'How long does one bottle last?', a: 'One bottle contains 120 capsules. At the recommended dose of 2 capsules per day, it lasts 60 days (2 months).' },

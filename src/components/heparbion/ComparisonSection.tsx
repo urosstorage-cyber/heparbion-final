@@ -125,7 +125,7 @@ const ComparisonSection: React.FC = () => {
   return (
     <section className="relative py-20 md:py-28 overflow-hidden">
       <div className="absolute inset-0 mesh-gradient-dark" />
-      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
         <div ref={ref} className={`text-center mb-12 scroll-reveal ${isRevealed ? 'revealed' : ''}`}>
           <span className="text-[10px] font-medium tracking-wide-elegant text-gold-400/70 uppercase block mb-4">{eyebrow}</span>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-white tracking-elegant mb-3">{title}</h2>

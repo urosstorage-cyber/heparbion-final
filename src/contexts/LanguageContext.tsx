@@ -34,7 +34,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.trust1': '15% off 6-month supply',
     'hero.trust2': 'Free EU shipping over 60',
     'hero.badge1': '120 Capsules',
-    'hero.badge2': 'Suitable for Vegetarians',
+    'hero.badge2': 'Suitable for Vegans',
     'hero.discover': 'Discover',
 
     // Trust Bar
@@ -44,8 +44,8 @@ const translations: Record<Language, Record<string, string>> = {
     'trust.gmp.sub': 'Pharmaceutical Grade',
     'trust.iso': 'ISO 22000',
     'trust.iso.sub': 'Food Safety',
-    'trust.veg': 'Vegetarian',
-    'trust.veg.sub': 'Suitable for Vegetarians',
+    'trust.veg': 'Vegan',
+    'trust.veg.sub': 'Suitable for Vegans',
     'trust.lab': 'Lab Tested',
     'trust.lab.sub': 'Independent Verification',
 
@@ -90,7 +90,7 @@ Unlike substances that unnaturally speed up or inhibit specific pathways, bitter
     'solution.p2.desc': 'Bitter compounds activate the vagus nerve, signaling your body to shift from "fight or flight" stress mode into "rest and digest" recovery mode.',
     'solution.p3.title': 'Synergistic Botanical Blend',
     'solution.p3.desc': 'Each ingredient is selected not just for individual potency, but for how they amplify each other\'s therapeutic effects.',
-    'solution.badge': 'Suitable for Vegetarians',
+    'solution.badge': 'Suitable for Vegans',
     'solution.capsules': 'Capsules',
     'solution.ingredients': 'Key Ingredients',
 
@@ -200,7 +200,7 @@ Unlike substances that unnaturally speed up or inhibit specific pathways, bitter
     'footer.quality.iso': 'ISO 22000 Food Safety',
     'footer.quality.lab': 'Independent Lab Testing',
     'footer.quality.eu': 'EU Manufactured',
-    'footer.quality.veg': 'Suitable for Vegetarians',
+    'footer.quality.veg': 'Suitable for Vegans',
     'footer.quality.noSugar': 'No Sugar, Gluten Free',
     'footer.wellness': 'WELLNESS INSIGHTS',
     'footer.wellness.desc': 'Receive Ayurvedic liver health tips and exclusive offers directly to your inbox.',
@@ -256,7 +256,7 @@ Unlike substances that unnaturally speed up or inhibit specific pathways, bitter
     'hero.trust1': '15% popust ob 6-mesečni zalogi',
     'hero.trust2': 'Brezplačna dostava v EU nad 60€',
     'hero.badge1': '120 kapsul',
-    'hero.badge2': 'Primerno za vegetarijance',
+    'hero.badge2': 'Primerno za vegane',
     'hero.discover': 'Odkrijte',
 
     // Trust Bar
@@ -266,8 +266,8 @@ Unlike substances that unnaturally speed up or inhibit specific pathways, bitter
     'trust.gmp.sub': 'Farmacevtski standard',
     'trust.iso': 'ISO 22000',
     'trust.iso.sub': 'Varnost hrane',
-    'trust.veg': 'Vegetarijansko',
-    'trust.veg.sub': 'Primerno za vegetarijance',
+    'trust.veg': 'Vegansko',
+    'trust.veg.sub': 'Primerno za vegane',
     'trust.lab': 'Skrbno testirano',
     'trust.lab.sub': 'Neodvisna verifikacija',
 
@@ -312,7 +312,7 @@ Sinergijska formula pomeni, da izdelek ne vsebuje samo ene učinkovine, ampak je
     'solution.p2.desc': 'Z aktivacijo receptorjev za grenko okus (T2R) pomaga telesu, da preklopi iz stresnega (simpatičnega) v regulativni (parasimpatični) način.',
     'solution.p3.title': 'Sinergijska botanična mešanica',
     'solution.p3.desc': 'Vsaka sestavina je izbrana ne le za individualno moč, temveč za to, kako ojača terapevtske učinke drugih sestavin.',
-    'solution.badge': 'Primerno za vegetarijance',
+    'solution.badge': 'Primerno za vegane',
     'solution.capsules': 'Kapsul',
     'solution.ingredients': 'Ključne sestavine',
 
@@ -436,7 +436,7 @@ Sinergijska formula pomeni, da izdelek ne vsebuje samo ene učinkovine, ampak je
     'footer.quality.iso': 'ISO 22000 varnost hrane',
     'footer.quality.lab': 'Neodvisno laboratorijsko testiranje',
     'footer.quality.eu': 'Izdelano v EU',
-    'footer.quality.veg': 'Primerno za vegetarijance',
+    'footer.quality.veg': 'Primerno za vegane',
     'footer.quality.noSugar': 'Brez sladkorja, brez glutena',
     'footer.wellness': 'NASVETI ZA POČUTJE',
     'footer.wellness.desc': 'Prejmite ajurvedske nasvete za zdravje jeter in ekskluzivne ponudbe neposredno v vaš e-poštni predal.',
