@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Mail, MapPin } from 'lucide-react';
 import logoImg from '@/assets/aleksandra_komasz_plus_logo.svg';
 
 const Footer: React.FC = () => {
   const { t, language } = useLanguage();
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      setIsSubscribed(true);
+      setEmail('');
+      // V praksi tukaj sledi klic APIja za prijavo na novice
+      setTimeout(() => setIsSubscribed(false), 3000);
+    }
+  };
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -24,7 +36,6 @@ const Footer: React.FC = () => {
     t('footer.quality.eu'), t('footer.quality.veg'), t('footer.quality.noSugar'),
   ];
 
-  const newsletterMailto = `mailto:info@aleksandrakomasz-plus.com?subject=${encodeURIComponent(language === 'slo' ? 'Prijava na novice - Nasveti za počutje' : 'Newsletter Signup - Wellness Insights')}&body=${encodeURIComponent(language === 'slo' ? 'Prosim, me dodajte na seznam prejemnikov.' : 'Please add me to your newsletter list.')}`;
 
   return (
     <footer className="relative bg-forest text-white overflow-hidden">
@@ -74,9 +85,22 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-xs font-semibold tracking-wide-elegant text-white/60 uppercase mb-5">{t('footer.wellness')}</h4>
             <p className="text-sm text-white/35 mb-4">{t('footer.wellness.desc')}</p>
-            <a href={newsletterMailto} className="inline-block px-4 py-2.5 bg-gold-400/20 border border-gold-400/20 text-gold-400 text-xs font-medium rounded-lg hover:bg-gold-400/30 transition-colors">
-              {t('footer.subscribe')}
-            </a>
+            <form onSubmit={handleSubscribe} className="relative mt-4">
+              <input
+                type="email"
+                placeholder={t('footer.emailPlaceholder')}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="w-full bg-white/[0.04] border border-white/10 rounded-full px-4 py-3 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-gold-400/50 transition-colors pr-24"
+              />
+              <button
+                type="submit"
+                className="absolute right-1 top-1 bottom-1 px-4 bg-gold-400 text-forest text-xs font-medium rounded-full hover:bg-[#E2C76A] transition-colors"
+              >
+                {isSubscribed ? t('footer.subscribed') : t('footer.subscribe')}
+              </button>
+            </form>
           </div>
         </div>
 
@@ -86,7 +110,7 @@ const Footer: React.FC = () => {
           <p className="text-xs text-white/20">{t('footer.copyright')}</p>
           <div className="flex items-center gap-6">
             {[t('footer.privacy'), t('footer.terms'), t('footer.cookies')].map((link, i) => (
-              <button key={i} onClick={() => {}} className="text-xs text-white/20 hover:text-white/40 transition-colors">{link}</button>
+              <button key={i} onClick={() => { }} className="text-xs text-white/20 hover:text-white/40 transition-colors">{link}</button>
             ))}
           </div>
         </div>
