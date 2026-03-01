@@ -72,7 +72,7 @@ const PainPointsGrid: React.FC = () => {
                   <span>{expanded === i ? (language === 'slo' ? 'Manj' : 'Less') : (language === 'slo' ? 'Podrobnosti' : 'Details')}</span>
                   <ChevronDown size={14} className={`transition-transform duration-300 ${expanded === i ? 'rotate-180' : ''}`} />
                 </div>
-                <div className={`overflow-hidden transition-all duration-500 ${expanded === i ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className={`overflow-hidden transition-all duration-500 ${expanded === i ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                   <p className="text-sm text-foreground/50 leading-relaxed pt-2">{point.detail}</p>
                 </div>
               </div>

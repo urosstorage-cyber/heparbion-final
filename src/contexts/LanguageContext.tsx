@@ -83,7 +83,7 @@ Unlike substances that unnaturally speed up or inhibit specific pathways, bitter
     'solution.eyebrow': 'The Science of Ayurveda',
     'solution.h2.1': 'The Secret is in the ',
     'solution.h2.shimmer': 'Bitters',
-    'solution.sub': 'Unlike generic supplements, Heparbion Plus focuses on the "Cooling & Clearing" principle — a time-tested Ayurvedic approach to hepatic balance.',
+    'solution.sub': 'Heparbion Plus is an herbal food supplement designed as a holistic, daily support for the health, function, and balance of your liver. The secret of our formula lies in traditional Ayurvedic bitter herbs, which support the entire gastrointestinal tract and promote gentle, natural detoxification without aggressive shocks. Unlike generic supplements, Heparbion Plus focuses on the "Cooling & Clearing" principle — a time-tested Ayurvedic approach to hepatic balance.',
     'solution.p1.title': 'Cooling & Clearing',
     'solution.p1.desc': 'Our bitter formula targets the liver\'s natural cooling pathways, reducing inflammatory heat and supporting bile flow for optimal digestion.',
     'solution.p2.title': 'Vagus Nerve Stimulation',

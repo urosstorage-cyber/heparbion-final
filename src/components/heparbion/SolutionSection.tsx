@@ -217,7 +217,7 @@ const SolutionSection: React.FC = () => {
                     <span>{expandedIng === i ? (language === 'slo' ? 'Manj' : 'Less') : (language === 'slo' ? 'Podrobnosti' : 'Details')}</span>
                     <ChevronDown size={12} className={`transition-transform ${expandedIng === i ? 'rotate-180' : ''}`} />
                   </button>
-                  <div className={`overflow-hidden transition-all duration-300 ${expandedIng === i ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  <div className={`overflow-hidden transition-all duration-300 ${expandedIng === i ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
                     <p className="text-xs text-white/35 leading-relaxed pt-1">{ing.detail}</p>
                   </div>
                 </div>
