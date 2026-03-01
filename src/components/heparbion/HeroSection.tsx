@@ -3,8 +3,9 @@ import { useParallax } from '@/hooks/useScrollReveal';
 import { useLanguage } from '@/hooks/useLanguage';
 import { ArrowDown, Leaf } from 'lucide-react';
 
-const PRODUCT_IMG = 'https://d64gsuwffb70l.cloudfront.net/699afc85723b98553d778884_1771766011742_1f7093db.webp';
+import heroImage from '@/assets/Naslovna slika-landig-heparbion.png';
 
+const PRODUCT_IMG = heroImage;
 const HeroSection: React.FC = () => {
   const parallaxRef = useParallax();
   const [loaded, setLoaded] = useState(false);
@@ -21,12 +22,12 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="hero" className="relative min-h-[85vh] flex items-center overflow-hidden">
       <div className="absolute inset-0 mesh-gradient-hero bg-cream-100" />
       <div className="absolute top-20 right-[10%] w-[500px] h-[500px] rounded-full bg-brand/[0.03] blur-3xl" />
       <div className="absolute bottom-20 left-[5%] w-[400px] h-[400px] rounded-full bg-gold-400/[0.04] blur-3xl" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-28 pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-28 pb-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           <div className="order-2 lg:order-1">
             <div className={`flex items-center gap-2 mb-6 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>

@@ -13,8 +13,7 @@ import kalmeghImg from '@/assets/ingredients/kalmegh.jpg';
 import haritakiImg from '@/assets/ingredients/haritaki.jpg';
 import licoriceImg from '@/assets/ingredients/licorice-root.jpeg';
 import turmericImg from '@/assets/ingredients/tumeric.jpg';
-import productImg1 from '@/assets/product-bottle-1.jpg';
-import productImg2 from '@/assets/product-bottle-2.jpg';
+import productImg from '@/assets/Heparbion product photo .jpg';
 
 const SolutionSection: React.FC = () => {
   const { ref: titleRef, isRevealed: titleRevealed } = useScrollReveal();
@@ -24,7 +23,7 @@ const SolutionSection: React.FC = () => {
   const [expandedIng, setExpandedIng] = useState<number | null>(null);
   const [lightboxImg, setLightboxImg] = useState<string | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
-  const productImages = [productImg1, productImg2];
+  const productImages = [productImg];
 
   const nextSlide = useCallback(() => {
     setActiveSlide((prev) => (prev + 1) % productImages.length);

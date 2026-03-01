@@ -34,7 +34,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.trust1': '15% off 6-month supply',
     'hero.trust2': 'Free EU shipping over 60',
     'hero.badge1': '120 Capsules',
-    'hero.badge2': 'Suitable for Vegans',
+    'hero.badge2': '2-month supply',
     'hero.discover': 'Discover',
 
     // Trust Bar
@@ -90,7 +90,7 @@ Unlike substances that unnaturally speed up or inhibit specific pathways, bitter
     'solution.p2.desc': 'Bitter compounds activate the vagus nerve, signaling your body to shift from "fight or flight" stress mode into "rest and digest" recovery mode.',
     'solution.p3.title': 'Synergistic Botanical Blend',
     'solution.p3.desc': 'Each ingredient is selected not just for individual potency, but for how they amplify each other\'s therapeutic effects.',
-    'solution.badge': 'Suitable for Vegans',
+    'solution.badge': '2-month supply',
     'solution.capsules': 'Capsules',
     'solution.ingredients': 'Key Ingredients',
 
@@ -256,7 +256,7 @@ Unlike substances that unnaturally speed up or inhibit specific pathways, bitter
     'hero.trust1': '15% popust ob 6-mesečni zalogi',
     'hero.trust2': 'Brezplačna dostava v EU nad 60€',
     'hero.badge1': '120 kapsul',
-    'hero.badge2': 'Primerno za vegane',
+    'hero.badge2': 'Zaloga za 2 meseca',
     'hero.discover': 'Odkrijte',
 
     // Trust Bar
@@ -305,14 +305,14 @@ Sinergijska formula pomeni, da izdelek ne vsebuje samo ene učinkovine, ampak je
     'solution.eyebrow': 'Znanost ajurvede',
     'solution.h2.1': 'Skrivnost je v ',
     'solution.h2.shimmer': 'grenčinah',
-    'solution.sub': 'V sodobni fiziologiji imajo jetra osrednjo vlogo pri presnovi in razstrupljanju. Heparbion Plus ne "forsira" vašega telesa, temveč spodbuja naravne signalne poti preko vagusnega živca.',
+    'solution.sub': 'Heparbion Plus je zeliščno prehransko dopolnilo, zasnovano kot celostna, vsakodnevna podpora zdravju, delovanju in ravnovesju vaših jeter. Skrivnost naše formule so ajurvedska tradicionalna grenka zelišča, ki podpirajo celoten gastrointestinalni trakt ter spodbujajo nežno, naravno razstrupljanje brez agresivnih šokov.',
     'solution.p1.title': 'Hlajenje in čiščenje',
     'solution.p1.desc': 'Naša grenka formula cilja na naravne hladilne poti jeter, zmanjšuje vnetno vročino in podpira pretok žolča za optimalno prebavo.',
     'solution.p2.title': 'Stimulacija vagusnega živca',
     'solution.p2.desc': 'Z aktivacijo receptorjev za grenko okus (T2R) pomaga telesu, da preklopi iz stresnega (simpatičnega) v regulativni (parasimpatični) način.',
     'solution.p3.title': 'Sinergijska botanična mešanica',
     'solution.p3.desc': 'Vsaka sestavina je izbrana ne le za individualno moč, temveč za to, kako ojača terapevtske učinke drugih sestavin.',
-    'solution.badge': 'Primerno za vegane',
+    'solution.badge': 'Zaloga za 2 meseca',
     'solution.capsules': 'Kapsul',
     'solution.ingredients': 'Ključne sestavine',
 
