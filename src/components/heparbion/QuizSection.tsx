@@ -104,7 +104,13 @@ const QuizSection: React.FC = () => {
       });
 
       const pdfUrl = language === 'slo' ? '/ebooks/heparbion-ebook-slo.pdf' : '/ebooks/heparbion-ebook-en.pdf';
-      window.open(pdfUrl, '_blank');
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = language === 'slo' ? 'heparbion-ebook-slo.pdf' : 'heparbion-ebook-en.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
       setEbookEmail('');
     } catch (err) {
       console.error('Submission failed', err);
@@ -146,8 +152,8 @@ const QuizSection: React.FC = () => {
                   {questions[currentQ].options.map((option, i) => (
                     <button key={i} onClick={() => handleSelect(option.value)}
                       className={`w-full text-left p-4 rounded-xl border transition-all duration-300 group ${selectedOption === option.value
-                          ? 'border-brand/30 bg-brand/[0.06] shadow-sm'
-                          : 'border-foreground/[0.06] bg-white/30 hover:border-foreground/15 hover:bg-white/50'
+                        ? 'border-brand/30 bg-brand/[0.06] shadow-sm'
+                        : 'border-foreground/[0.06] bg-white/30 hover:border-foreground/15 hover:bg-white/50'
                         }`}>
                       <div className="flex items-center gap-3">
                         <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${selectedOption === option.value ? 'border-brand bg-brand' : 'border-foreground/20'
