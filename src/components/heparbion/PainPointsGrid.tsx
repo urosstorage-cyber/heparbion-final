@@ -3,11 +3,11 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { useLanguage } from '@/hooks/useLanguage';
 import { ChevronDown } from 'lucide-react';
 
-import liverBalanceImg from '@/assets/Do you often feel heavy or bloated after a normal meal?.png';
-import bitterHerbsImg from '@/assets/Is your energy crashing in the afternoon?.png';
-import gutLiverImg from '@/assets/Is your metabolism sluggish despite a healthy diet?.png';
+import liverBalanceImg from '@/assets/heavy-or-bloated.png';
+import bitterHerbsImg from '@/assets/energy-crashing.png';
+import gutLiverImg from '@/assets/metabolism-sluggish.png';
 import dailyRitualImg from '@/assets/painpoints/daily-ritual.jpg';
-import traditionalWisdomImg from '@/assets/Do you wake up feeling unrefreshed and "stagnant"?.png';
+import traditionalWisdomImg from '@/assets/unrefreshed.png';
 
 const PainPointsGrid: React.FC = () => {
   const { ref: titleRef, isRevealed: titleRevealed } = useScrollReveal();

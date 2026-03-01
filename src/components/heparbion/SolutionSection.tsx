@@ -13,7 +13,7 @@ import kalmeghImg from '@/assets/ingredients/kalmegh.jpg';
 import haritakiImg from '@/assets/ingredients/haritaki.jpg';
 import licoriceImg from '@/assets/ingredients/licorice-root.jpeg';
 import turmericImg from '@/assets/ingredients/tumeric.jpg';
-import productImg from '@/assets/Heparbion product photo .jpg';
+import productImg from '@/assets/heparbion-product-photo.jpg';
 
 const SolutionSection: React.FC = () => {
   const { ref: titleRef, isRevealed: titleRevealed } = useScrollReveal();

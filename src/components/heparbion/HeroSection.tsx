@@ -3,7 +3,7 @@ import { useParallax } from '@/hooks/useScrollReveal';
 import { useLanguage } from '@/hooks/useLanguage';
 import { ArrowDown, Leaf } from 'lucide-react';
 
-import heroImage from '@/assets/Naslovna slika-landig-heparbion.png';
+import heroImage from '@/assets/naslovna-slika.png';
 
 const PRODUCT_IMG = heroImage;
 const HeroSection: React.FC = () => {
