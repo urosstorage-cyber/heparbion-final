@@ -11,7 +11,7 @@ const AudioWidget: React.FC = () => {
   const [duration, setDuration] = useState(0);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,11 +84,15 @@ const AudioWidget: React.FC = () => {
 
   if (!isVisible) return null;
 
+  const audioSrc = language === 'slo'
+    ? '/Zakaj_potrebujete_grencine.m4a'
+    : '/Why_Your_Overheated_Liver_Needs_Bitterness.m4a';
+
   return (
     <div className={`fixed z-50 transition-all duration-700 w-full md:w-auto left-0 md:left-auto md:right-8 bottom-4 md:bottom-8 px-4 md:px-0 flex justify-center ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
       <audio
         ref={audioRef}
-        src="/Why_Your_Overheated_Liver_Needs_Bitterness.m4a"
+        src={audioSrc}
         preload="metadata"
         onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
         onTimeUpdate={(e) => {
