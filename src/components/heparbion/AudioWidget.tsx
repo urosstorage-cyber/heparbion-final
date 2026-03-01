@@ -34,6 +34,24 @@ const AudioWidget: React.FC = () => {
     // but keep a fallback check.
   }, []);
 
+  const audioSrc = language === 'slo'
+    ? '/Zakaj_potrebujete_grencine.m4a'
+    : '/Why_Your_Overheated_Liver_Needs_Bitterness.m4a';
+
+  useEffect(() => {
+    if (audioRef.current) {
+      const wasPlaying = isPlaying;
+      audioRef.current.pause();
+      audioRef.current.load();
+      setIsPlaying(false);
+      setProgress(0);
+      setCurrentTime(0);
+
+      // Opt out of auto-resume to avoid confusing UX across language switches,
+      // but if you prefer, you can call audioRef.current.play() here.
+    }
+  }, [audioSrc]);
+
   const formatTime = (time: number) => {
     if (isNaN(time)) return '0:00';
     const m = Math.floor(time / 60);
@@ -83,10 +101,6 @@ const AudioWidget: React.FC = () => {
   };
 
   if (!isVisible) return null;
-
-  const audioSrc = language === 'slo'
-    ? '/Zakaj_potrebujete_grencine.m4a'
-    : '/Why_Your_Overheated_Liver_Needs_Bitterness.m4a';
 
   return (
     <div className={`fixed z-50 transition-all duration-700 w-full md:w-auto left-0 md:left-auto md:right-8 bottom-4 md:bottom-8 px-4 md:px-0 flex justify-center ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
