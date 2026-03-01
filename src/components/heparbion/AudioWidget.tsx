@@ -23,30 +23,8 @@ const AudioWidget: React.FC = () => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    const updateProgress = () => {
-      setCurrentTime(audio.currentTime);
-      setProgress((audio.currentTime / (audio.duration || 1)) * 100);
-    };
-
-    const handleLoadedMetadata = () => {
-      setDuration(audio.duration);
-    };
-
-    const handleEnded = () => {
-      setIsPlaying(false);
-      setProgress(0);
-      setCurrentTime(0);
-    };
-
-    audio.addEventListener('timeupdate', updateProgress);
-    audio.addEventListener('loadedmetadata', handleLoadedMetadata);
-    audio.addEventListener('ended', handleEnded);
-
-    return () => {
-      audio.removeEventListener('timeupdate', updateProgress);
-      audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
-      audio.removeEventListener('ended', handleEnded);
-    };
+    // We'll rely mostly on React synthetic events on the <audio> element to fix the duration/seconds issues,
+    // but keep a fallback check.
   }, []);
 
   const formatTime = (time: number) => {
@@ -105,6 +83,16 @@ const AudioWidget: React.FC = () => {
         ref={audioRef}
         src="/Why_Your_Overheated_Liver_Needs_Bitterness.m4a"
         preload="metadata"
+        onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
+        onTimeUpdate={(e) => {
+          setCurrentTime(e.currentTarget.currentTime);
+          setProgress((e.currentTarget.currentTime / (e.currentTarget.duration || 1)) * 100);
+        }}
+        onEnded={() => {
+          setIsPlaying(false);
+          setProgress(0);
+          setCurrentTime(0);
+        }}
       />
       {isExpanded ? (
         <div className="mx-auto w-[90vw] md:w-[380px] rounded-[24px] p-6 lg:p-8 relative overflow-hidden animate-reveal-up"
@@ -118,51 +106,51 @@ const AudioWidget: React.FC = () => {
 
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-brand/[0.08] flex items-center justify-center border border-brand/5">
+              <div className="w-10 h-10 rounded-xl bg-black/5 flex items-center justify-center">
                 <Volume2 size={18} className="text-brand" />
               </div>
               <div className="text-left">
-                <p className="text-[10px] font-bold tracking-widest text-brand uppercase">{t('audio.podcast')}</p>
-                <p className="text-[11px] text-brand/60">{t('audio.author')}</p>
+                <p className="text-base font-medium text-brand capitalize">{t('audio.podcast')}</p>
+                <p className="text-[12px] text-brand/40 font-medium">{t('audio.author')}</p>
               </div>
             </div>
-            <button onClick={handleClose} className="p-1.5 rounded-full hover:bg-brand/5 transition-colors -mt-1 -mr-1">
-              <X size={20} className="text-gold-400" />
+            <button onClick={handleClose} className="p-1.5 rounded-full hover:bg-black/5 transition-colors -mt-1 -mr-1">
+              <X size={18} className="text-black/40" />
             </button>
           </div>
 
-          <div className="text-left mb-8 mt-2">
-            <h3 className="font-serif text-[22px] font-medium text-brand leading-snug mb-1">{t('audio.title')}</h3>
-            <p className="text-base text-brand/80">{t('audio.subtitle')}</p>
+          <div className="text-left mb-8 mt-4">
+            <h3 className="font-serif text-[20px] font-medium text-brand leading-snug mb-2">{t('audio.title')}</h3>
+            <p className="text-[13px] text-brand/50 font-medium">{t('audio.subtitle')}</p>
+          </div>
+
+          {/* Golden Waves */}
+          <div className="flex items-end justify-center gap-[4px] h-12 mb-6 px-4">
+            {Array.from({ length: 26 }).map((_, i) => (
+              <div key={i} className={`w-1 rounded-full transition-all duration-300 ${isPlaying ? 'bg-[#D4AF37]' : 'bg-[#D4AF37]/80'}`}
+                style={{ height: isPlaying ? `${Math.max(6, Math.random() * 40)}px` : `${Math.max(8, Math.sin(i * 0.45) * 16 + 20)}px`, transition: isPlaying ? 'height 0.3s ease' : 'height 0.5s ease' }} />
+            ))}
           </div>
 
           <div className="mb-8">
-            <div className="h-[3px] bg-brand/10 rounded-full overflow-hidden cursor-pointer" onClick={handleSeek}>
+            <div className="h-1.5 bg-black/5 rounded-full overflow-hidden cursor-pointer" onClick={handleSeek}>
               <div
-                className="h-full bg-[#D4AF37] transition-all duration-150 relative"
+                className="h-full bg-gradient-to-r from-brand to-[#D4AF37] transition-all duration-150 relative"
                 style={{ width: `${progress}%` }}
               />
             </div>
-            <div className="flex justify-between mt-3 px-1">
-              <span className="text-[10px] text-brand/50 font-medium tracking-wide">{formatTime(currentTime)}</span>
-              <span className="text-[10px] text-brand/50 font-medium tracking-wide">{formatTime(duration)}</span>
+            <div className="flex justify-between mt-2.5 px-0.5">
+              <span className="text-[11px] text-brand/35 font-medium tracking-wide">{formatTime(currentTime)}</span>
+              <span className="text-[11px] text-brand/35 font-medium tracking-wide">{formatTime(duration)}</span>
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-8">
-            <button onClick={() => jump(-15)} className="text-foreground/70 hover:text-gold-400 transition-colors p-2 flex flex-col items-center">
-              <RotateCcw size={22} />
-              <span className="text-[9px] font-medium mt-1">15s</span>
-            </button>
+          <div className="flex items-center justify-center">
             <button
               onClick={togglePlay}
-              className="w-16 h-16 rounded-full bg-gradient-to-br from-[#E2C76A] to-[#D4AF37] shadow-lg shadow-[#D4AF37]/30 flex items-center justify-center text-white hover:scale-105 hover:shadow-xl hover:shadow-[#D4AF37]/40 transition-all duration-300 border border-white/40"
+              className="w-[52px] h-[52px] rounded-full bg-brand shadow-lg flex items-center justify-center text-white hover:scale-105 hover:bg-brand-600 transition-all duration-300"
             >
-              {isPlaying ? <Pause size={24} fill="currentColor" /> : <Play size={24} fill="currentColor" className="ml-1" />}
-            </button>
-            <button onClick={() => jump(15)} className="text-foreground/70 hover:text-gold-400 transition-colors p-2 flex flex-col items-center">
-              <RotateCw size={22} />
-              <span className="text-[9px] font-medium mt-1">15s</span>
+              {isPlaying ? <Pause size={18} fill="currentColor" /> : <Play size={18} fill="currentColor" className="ml-1" />}
             </button>
           </div>
         </div>
