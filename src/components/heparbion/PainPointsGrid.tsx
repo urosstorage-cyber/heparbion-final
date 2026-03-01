@@ -69,7 +69,7 @@ const PainPointsGrid: React.FC = () => {
                 <p className="text-[11px] font-medium text-brand/60 uppercase tracking-wide mb-2">{point.subtitle}</p>
                 <h3 className="font-serif text-lg md:text-xl font-medium text-foreground mb-3 leading-snug">{point.question}</h3>
                 <div className="flex items-center gap-1 text-xs text-brand font-medium mb-2">
-                  <span>{expanded === i ? 'Less' : 'Details'}</span>
+                  <span>{expanded === i ? (language === 'slo' ? 'Manj' : 'Less') : (language === 'slo' ? 'Podrobnosti' : 'Details')}</span>
                   <ChevronDown size={14} className={`transition-transform duration-300 ${expanded === i ? 'rotate-180' : ''}`} />
                 </div>
                 <div className={`overflow-hidden transition-all duration-500 ${expanded === i ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
@@ -87,7 +87,7 @@ const PainPointsGrid: React.FC = () => {
             className="inline-flex items-center gap-2 text-sm font-medium text-gold-400 hover:text-gold-500 transition-colors">
             {t('pain.cta')}
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         </div>

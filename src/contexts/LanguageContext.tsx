@@ -305,7 +305,7 @@ Sinergijska formula pomeni, da izdelek ne vsebuje samo ene učinkovine, ampak je
     'solution.eyebrow': 'Znanost ajurvede',
     'solution.h2.1': 'Skrivnost je v ',
     'solution.h2.shimmer': 'grenčinah',
-    'solution.sub': 'Heparbion Plus je zeliščno prehransko dopolnilo, zasnovano kot celostna, vsakodnevna podpora zdravju, delovanju in ravnovesju vaših jeter. Skrivnost naše formule so ajurvedska tradicionalna grenka zelišča, ki podpirajo celoten gastrointestinalni trakt ter spodbujajo nežno, naravno razstrupljanje brez agresivnih šokov.',
+    'solution.sub': 'Heparbion Plus je zeliščno prehransko dopolnilo, zasnovano kot celostna, vsakodnevna podpora zdravju, delovanju in ravnovesju vaših jeter. Skrivnost naše formule so ajurvedska tradicionalna grenka zelišča, ki podpirajo celoten gastrointestinalni trakt ter spodbujajo nežno, naravno razstrupljanje brez agresivnih šokov. Za razliko od generičnih dopolnil se Heparbion Plus osredotoča na princip "hlajenja in čiščenja" (Cooling & Clearing) – preizkušen ajurvedski pristop k jetrnemu ravnovesju.',
     'solution.p1.title': 'Hlajenje in čiščenje',
     'solution.p1.desc': 'Naša grenka formula cilja na naravne hladilne poti jeter, zmanjšuje vnetno vročino in podpira pretok žolča za optimalno prebavo.',
     'solution.p2.title': 'Stimulacija vagusnega živca',

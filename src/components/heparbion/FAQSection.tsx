@@ -12,12 +12,12 @@ const FAQSection: React.FC = () => {
   const eyebrow = language === 'slo' ? 'FAQ' : 'FAQ';
 
   const faqs = language === 'slo' ? [
-    { q: 'Ali je ta formula varna in certificirana?', a: 'Da. Proizvedeno v EU v obratu z GMP, ISO 22000 in FSSC certifikati, z natančno laboratorijsko preverjenimi sestavinami.' },
-    { q: 'Zakaj ta izdelek ne obljublja "hitrega detoksa"?', a: 'Ajurvedska filozofija (in EU znanost) se strinjata: hitri diuretiki in odvajala telo le obremenijo. Naša formula nudi dolgoročno, kumulativno in nežno podporo presnovi in ravnovesju.' },
-    { q: 'Ali izdelek vsebuje alergene?', a: 'Kapsule so primerne za vegane, vendar pa zaradi vključitve celotnega spektra naravnih zelišč za prebavo vsebujejo naravno zeleno (celery), kar skrbno transparentno navajamo.' },
+    { q: 'Ali je ta formula varna in certificirana?', a: 'Da. Proizvedeno v EU v obratu z najvišjimi standardi: GMP, ISO 22000 in FSSC certifikati. Vsaka serija je laboratorijsko preverjena.' },
+    { q: 'Zakaj ta izdelek ne obljublja "hitrega detoksa"?', a: 'Zato, ker jetra potrebujejo stalno, nežno podporo, ne pa agresivnih šokov. Heparbion Plus spoštuje naravne telesne procese in deluje dolgoročno.' },
+    { q: 'Ali izdelek vsebuje alergene?', a: 'Izdelek vsebuje seme zelene. Ne vsebuje glutena, laktoze ali umetnih barvil. Kapsule so veganske (HPMC).' },
     { q: 'Kako dolgo traja dostava v tujino?', a: 'Dostava preko GLS partnerja traja običajno od 1 do 6 delovnih dni od dneva odpreme.' },
-    { q: 'Ali je Heparbion Plus primeren za dolgotrajno vsakodnevno jemanje?', a: 'Absolutno. Ne vsebuje megadoz posameznih izoliranih snovi, temveč sinergijo zelišč (kot so ingver, sladki koren in amalaki), ki so zasnovana prav za varno vsakodnevno rutino.' },
-    { q: 'Kako dolgo traja ena steklenička?', a: 'Ena steklenička vsebuje 120 kapsul. Pri priporočenem odmerku 2 kapsuli na dan zadošča za 60 dni (2 meseca).' },
+    { q: 'Ali je Heparbion Plus primeren za dolgotrajno vsakodnevno jemanje?', a: 'Da, formula je zasnovana kot varna vsakodnevna podpora za vzdrževanje vitalnosti jeter in prebavnega trakta.' },
+    { q: 'Kako se izdelek uporablja in kako dolgo traja ena steklenička?', a: 'Priporočen vnos sta 2 kapsuli dnevno, najbolje zjutraj ali zvečer s toplo vodo pred obrokom. Pakiranje vsebuje 120 kapsul, kar zadošča za 2 meseca uporabe.' },
   ] : [
     { q: 'Is this formula safe and certified?', a: 'Yes. Manufactured in the EU in a facility with GMP, ISO 22000, and FSSC certifications, with precisely lab-verified ingredients.' },
     { q: 'Why doesn\'t this product promise a "quick detox"?', a: 'Ayurvedic philosophy (and EU science) agree: fast diuretics and laxatives only burden the body. Our formula offers long-term, cumulative, and gentle metabolic and balance support.' },

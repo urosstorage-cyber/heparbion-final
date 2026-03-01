@@ -214,7 +214,7 @@ const SolutionSection: React.FC = () => {
                   </div>
                   <button onClick={() => setExpandedIng(expandedIng === i ? null : i)}
                     className="flex items-center gap-1 text-xs text-gold-400/70 hover:text-gold-300 transition-colors mb-1">
-                    <span>{expandedIng === i ? 'Less' : 'Details'}</span>
+                    <span>{expandedIng === i ? (language === 'slo' ? 'Manj' : 'Less') : (language === 'slo' ? 'Podrobnosti' : 'Details')}</span>
                     <ChevronDown size={12} className={`transition-transform ${expandedIng === i ? 'rotate-180' : ''}`} />
                   </button>
                   <div className={`overflow-hidden transition-all duration-300 ${expandedIng === i ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
