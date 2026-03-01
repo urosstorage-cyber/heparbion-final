@@ -82,7 +82,7 @@ const QuizSection: React.FC = () => {
     ? 'PRAVNO OBVESTILO: Ta kviz je namenjen izključno informativnim in izobraževalnim namenom. Ne zagotavlja medicinskih nasvetov ali diagnoze.'
     : 'LEGAL / ETHICAL FOOTER: This quiz is for informational and educational purposes only. It does not provide medical advice or diagnosis.';
 
-  const handleEbookSubmit = (e: React.FormEvent) => {
+  const handleEbookSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const email = ebookEmail.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -93,18 +93,22 @@ const QuizSection: React.FC = () => {
 
     setEbookError('');
 
-    const subject =
-      language === 'slo'
-        ? 'Heparbion Plus kviz – e-priročnik'
-        : 'Heparbion Plus Quiz – E-book';
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-    const bodyLines = [
-      `Email: ${email}`,
-      `Language: ${language}`,
-      `Result: ${result.title}`,
-    ];
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString()
+      });
 
-    window.location.href = `mailto:info@aleksandrakomasz-plus.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+      const pdfUrl = language === 'slo' ? '/ebooks/heparbion-ebook-slo.pdf' : '/ebooks/heparbion-ebook-en.pdf';
+      window.open(pdfUrl, '_blank');
+      setEbookEmail('');
+    } catch (err) {
+      console.error('Submission failed', err);
+    }
   };
 
   return (
@@ -141,35 +145,30 @@ const QuizSection: React.FC = () => {
                 <div className="space-y-3 mb-8">
                   {questions[currentQ].options.map((option, i) => (
                     <button key={i} onClick={() => handleSelect(option.value)}
-                      className={`w-full text-left p-4 rounded-xl border transition-all duration-300 group ${
-                        selectedOption === option.value
+                      className={`w-full text-left p-4 rounded-xl border transition-all duration-300 group ${selectedOption === option.value
                           ? 'border-brand/30 bg-brand/[0.06] shadow-sm'
                           : 'border-foreground/[0.06] bg-white/30 hover:border-foreground/15 hover:bg-white/50'
-                      }`}>
-                      <div className="flex items-center gap-3">
-                        <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
-                          selectedOption === option.value ? 'border-brand bg-brand' : 'border-foreground/20'
                         }`}>
+                      <div className="flex items-center gap-3">
+                        <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${selectedOption === option.value ? 'border-brand bg-brand' : 'border-foreground/20'
+                          }`}>
                           {selectedOption === option.value && <div className="w-2 h-2 rounded-full bg-white" />}
                         </div>
-                        <span className={`text-sm transition-colors ${
-                          selectedOption === option.value ? 'text-foreground font-medium' : 'text-foreground/60'
-                        }`}>{option.label}</span>
+                        <span className={`text-sm transition-colors ${selectedOption === option.value ? 'text-foreground font-medium' : 'text-foreground/60'
+                          }`}>{option.label}</span>
                       </div>
                     </button>
                   ))}
                 </div>
                 <div className="flex items-center justify-between">
                   <button onClick={handleBack} disabled={currentQ === 0}
-                    className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                      currentQ === 0 ? 'text-foreground/20 cursor-not-allowed' : 'text-foreground/50 hover:text-foreground'
-                    }`}>
+                    className={`flex items-center gap-2 text-sm font-medium transition-colors ${currentQ === 0 ? 'text-foreground/20 cursor-not-allowed' : 'text-foreground/50 hover:text-foreground'
+                      }`}>
                     <ArrowLeft size={16} /> {t('quiz.back')}
                   </button>
                   <button onClick={handleNext} disabled={selectedOption === null}
-                    className={`btn-glow flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all ${
-                      selectedOption === null ? 'bg-brand/20 text-white/50 cursor-not-allowed' : 'bg-brand text-white hover:bg-brand-600'
-                    }`}>
+                    className={`btn-glow flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all ${selectedOption === null ? 'bg-brand/20 text-white/50 cursor-not-allowed' : 'bg-brand text-white hover:bg-brand-600'
+                      }`}>
                     {currentQ === questions.length - 1 ? t('quiz.seeResults') : t('quiz.next')}
                     <ArrowRight size={16} />
                   </button>
@@ -183,40 +182,46 @@ const QuizSection: React.FC = () => {
                 <h3 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4">{result.title}</h3>
                 <p className="text-sm text-foreground/50 leading-relaxed mb-4 max-w-md mx-auto">{result.description}</p>
                 <p className="text-sm text-foreground/70 font-medium mb-8 max-w-md mx-auto">{result.recommendation}</p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-                  {result.isLow ? (
-                    <div className="w-full max-w-md">
-                      <form onSubmit={handleEbookSubmit} className="flex flex-col sm:flex-row gap-3">
-                        <input
-                          type="email"
-                          value={ebookEmail}
-                          onChange={(e) => setEbookEmail(e.target.value)}
-                          required
-                          placeholder={language === 'slo' ? 'Vaš email' : 'Your email'}
-                          className="flex-1 px-4 py-3 rounded-full border border-foreground/15 text-sm text-foreground placeholder:text-foreground/30 bg-white/80 focus:outline-none focus:border-brand/40 transition-colors"
-                        />
-                        <button
-                          type="submit"
-                          className="btn-glow px-6 py-3.5 bg-brand text-white text-sm font-medium tracking-wide rounded-full flex items-center justify-center gap-2"
-                        >
-                          <Download size={16} className="opacity-70" />
-                          {language === 'slo' ? 'Prenesi brezplačen e-priročnik' : 'Download Free E-book'}
-                        </button>
-                      </form>
-                      {ebookError && (
-                        <p className="mt-2 text-xs text-red-500 text-left">{ebookError}</p>
-                      )}
-                    </div>
-                  ) : (
-                    <a href={orderUrl} target="_blank" rel="noopener noreferrer"
-                      className="btn-glow px-8 py-3.5 bg-brand text-white text-sm font-medium tracking-wide rounded-full flex items-center gap-2">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-70">
-                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
-                      </svg>
-                      {result.cta}
-                    </a>
-                  )}
-                  <button onClick={handleReset} className="flex items-center gap-2 px-6 py-3.5 text-sm text-foreground/50 hover:text-foreground transition-colors">
+                <div className="flex flex-col items-center justify-center gap-4">
+                  <div className="flex w-full justify-center">
+                    {result.isLow ? (
+                      <div className="w-full max-w-md">
+                        <form name="ebook-download" method="POST" data-netlify="true" onSubmit={handleEbookSubmit} className="flex flex-row items-center w-full gap-3">
+                          <input type="hidden" name="form-name" value="ebook-download" />
+                          <input type="hidden" name="language" value={language} />
+                          <input type="hidden" name="result" value={result.title} />
+                          <input
+                            type="email"
+                            name="email"
+                            value={ebookEmail}
+                            onChange={(e) => setEbookEmail(e.target.value)}
+                            required
+                            placeholder={language === 'slo' ? 'Vaš email' : 'Your email'}
+                            className="flex-1 px-4 py-3 rounded-full border border-foreground/15 text-sm text-foreground placeholder:text-foreground/30 bg-white/80 focus:outline-none focus:border-brand/40 transition-colors w-full"
+                          />
+                          <button
+                            type="submit"
+                            className="btn-glow px-6 py-3.5 bg-brand text-white text-sm font-medium tracking-wide rounded-full flex items-center justify-center gap-2 whitespace-nowrap"
+                          >
+                            <Download size={16} className="opacity-70" />
+                            {language === 'slo' ? 'Prenesi brezplačen e-priročnik' : 'Download Free E-book'}
+                          </button>
+                        </form>
+                        {ebookError && (
+                          <p className="mt-2 text-xs text-red-500 text-left">{ebookError}</p>
+                        )}
+                      </div>
+                    ) : (
+                      <a href={orderUrl} target="_blank" rel="noopener noreferrer"
+                        className="btn-glow px-8 py-3.5 bg-brand text-white text-sm font-medium tracking-wide rounded-full flex items-center justify-center w-full sm:w-auto gap-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-70">
+                          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" /><line x1="3" y1="6" x2="21" y2="6" /><path d="M16 10a4 4 0 01-8 0" />
+                        </svg>
+                        {result.cta}
+                      </a>
+                    )}
+                  </div>
+                  <button onClick={handleReset} className="flex items-center gap-2 px-6 py-3.5 text-sm text-foreground/50 hover:text-foreground transition-colors mt-2">
                     <RotateCcw size={14} /> {t('quiz.retake')}
                   </button>
                 </div>
@@ -225,7 +230,7 @@ const QuizSection: React.FC = () => {
           </div>
 
           {/* Legal disclaimer */}
-          <p className="text-[10px] text-foreground/30 text-center mt-6 max-w-lg mx-auto leading-relaxed">{legalText}</p>
+          <p className="text-sm text-foreground/50 text-center mt-6 max-w-lg mx-auto leading-relaxed">{legalText}</p>
         </div>
       </div>
     </section>
