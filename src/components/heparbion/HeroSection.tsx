@@ -77,7 +77,7 @@ const HeroSection: React.FC = () => {
             <div ref={parallaxRef} className={`relative transition-all duration-1000 delay-300 ${loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
               <div className="absolute inset-0 bg-gradient-to-br from-brand/5 via-transparent to-gold-400/5 rounded-full blur-3xl scale-110" />
               <div className="parallax-float relative">
-                <img src={PRODUCT_IMG} alt="Heparbion Plus - Premium Ayurvedic Liver Support" className="w-[320px] md:w-[400px] lg:w-[460px] h-auto drop-shadow-2xl" />
+                <img src={PRODUCT_IMG} alt="Heparbion Plus - Premium Ayurvedic Liver Support" className="w-[280px] md:w-[360px] lg:w-[420px] h-auto drop-shadow-2xl" />
               </div>
               <div className="absolute -bottom-4 -left-4 glass-card rounded-2xl px-4 py-3 animate-float-slow" style={{ animationDelay: '2s' }}>
                 <div className="flex items-center gap-2">

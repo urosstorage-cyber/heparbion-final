@@ -40,7 +40,7 @@ const SolutionSection: React.FC = () => {
       detail:
         language === 'slo'
           ? `Kalmegha (Andrographis paniculata) je eno najpomembnejših grenkih zelišč v tradicionalni indijski in kitajski medicini. Glavni bioaktivni metaboliti v rastlini so diterpenski laktoni, ki so predmet obsežnih kliničnih in prekliničnih študij zaradi svojih protivnetnih, antioksidativnih in presnovnih mehanizmov delovanja. Kalmegha je povezana s spodbujanjem presnovnih fizioloških poti, ki so pomembne za uravnavanje presnove in delovanja jeter. Študije kažejo, da diterpenski laktoni delujejo kot selektivni modulanti imunskega sistema, ki lahko zmanjšujejo izražanje pro-vnetnih citokinov (npr. TNF-α, IL-6) in antimikrobni agenti proti določenim bakterijam in virusom v vitro modelih, kar lahko izboljša integriteto prebavnega trakta in zmanjša vnetne odzive. Empirične študije podpirajo njen vpliv na jetra in presnovo lipidov, vnetne in imunološke odzive ter antioksidativno zaščito celic.`
-          : 'Premier Ayurvedic bitter herb rich in diterpene lactones, supporting liver metabolism, inflammatory balance, and cellular protection.',
+          : 'Kalmegh (Andrographis paniculata) is one of the most important bitter herbs in traditional Indian and Chinese medicine. The main bioactive metabolites in the plant are diterpene lactones, which are the subject of extensive clinical and preclinical studies for their anti-inflammatory, antioxidant, and metabolic mechanisms of action. Kalmegh is associated with the stimulation of metabolic physiological pathways important for regulating metabolism and liver function. Studies show that diterpene lactones act as selective immune system modulators that can reduce the expression of pro-inflammatory cytokines and act as antimicrobial agents in vitro models, which can improve the integrity of the digestive tract and reduce inflammatory responses. Empirical studies support its impact on the liver and lipid metabolism, inflammatory and immune responses, and cellular antioxidant protection.',
       strength: '200mg',
       image: kalmeghImg,
     },
@@ -49,7 +49,7 @@ const SolutionSection: React.FC = () => {
       detail:
         language === 'slo'
           ? `Bhumyamalaki (Phyllanthus niruri) je v ajurvedi znana kot pomembna rastlina za podporo jetrom in sečilom, je ena najbolj raziskanih rastlin iz rodu Phyllanthus. Uporablja se v ajurvedski, siddha in tradicionalni kitajski medicini. Rastlina vsebuje bogat nabor bioaktivnih spojin, med katerimi so najpomembnejši lignani (npr. phyllanthin, hypophyllanthin), flavonoidi, tanini, fenolne kisline, alkaloidi in terpeni. Lignani, zlasti phyllanthin in hypophyllanthin, so ključne učinkovine, ki so predmet številnih farmakoloških in kliničnih raziskav zaradi svojega vpliva na delovanje jeter, protivnetne in antioksidativne aktivnosti. Raziskave kažejo, da bioaktivne spojine podpirajo hepatocitno integriteto in celično stabilnost, sodelujejo pri modulaciji jetrnih encimskih poti, vključenih v presnovo lipidov in toksinov, ter prispevajo k uravnavanju oksidativnega stresa v jetrnem tkivu. Zaradi teh lastnosti se Phyllanthus niruri pogosto vključuje v formulacije, namenjene dolgoročni podpori jetrnemu ravnovesju. Snovi v rastlini hkrati delujejo kot imunomodulatorji in prispevajo k uravnavanju kroničnih, nizkointenzivnih vnetnih procesov. Bhumyamalaki deluje antioksidativno, saj njene fenolne in flavonoidne spojine pomagajo nevtralizirati proste radikale in s tem ščitijo jetrne celice pred oksidativnimi poškodbami.`
-          : 'Phyllanthus niruri extract supporting liver cell integrity, long-term hepatic balance, antioxidant protection, and gentle immune modulation.',
+          : 'Bhumyamalaki (Phyllanthus niruri) is known in Ayurveda as an important plant for liver and urinary tract support, and is one of the most researched plants of the Phyllanthus genus. It is used in Ayurvedic, Siddha, and traditional Chinese medicine. The plant contains a rich array of bioactive compounds, the most important being lignans (e.g., phyllanthin, hypophyllanthin), flavonoids, tannins, phenolic acids, alkaloids, and terpenes. Lignans are key active substances subject to numerous pharmacological and clinical studies due to their impact on liver function, anti-inflammatory, and antioxidant activity. Research indicates these bioactive compounds support hepatocyte integrity and cellular stability, participate in the modulation of liver enzyme pathways involved in lipid and toxin metabolism, and contribute to the regulation of oxidative stress in liver tissue. Because of these properties, Phyllanthus niruri is often included in formulations designed for long-term support of liver balance. The substances in the plant also act as immunomodulators and contribute to the regulation of chronic, low-intensity inflammatory processes. Bhumyamalaki acts as an antioxidant, as its phenolic and flavonoid compounds help neutralize free radicals, thereby protecting liver cells from oxidative damage.',
       strength: '150mg',
       image: bhumyamalakiImg,
     },
@@ -58,7 +58,7 @@ const SolutionSection: React.FC = () => {
       detail:
         language === 'slo'
           ? `Berberis oziroma češminov koren (Berberis vulgaris) se tradicionalno uporablja v evropski fitoterapiji, ajurvedi in tradicionalni kitajski medicini, zlasti kot podpora delovanju jeter, žolča in prebavnega sistema. Rastlina vsebuje bogat nabor bioaktivnih spojin, med katerimi so najpomembnejši izoquinolinski alkaloidi, predvsem berberin, pa tudi palmatin, berbamin in jatrorhizin, ter flavonoidi in fenolne spojine. Berberin je ključna učinkovina, ki je predmet številnih farmakoloških in kliničnih raziskav zaradi svojega vpliva na uravnavanje presnove, delovanje jeter in uravnavanje vnetnih procesov. Raziskave kažejo, da berberin sodeluje pri modulaciji jetrnih encimskih poti, vključenih v presnovo lipidov in glukoze, ter podpira izločanje žolča. Poleg tega prispeva k zmanjševanju oksidativnega stresa in podpira odpornost ter dolgoživost jetrnih celic. Bioaktivne spojine v češminovem korenu izkazujejo tudi protivnetne in imunomodulacijske lastnosti, kar je pomembno pri dolgotrajnih, nizkointenzivnih presnovnih obremenitvah. Zaradi teh lastnosti se Berberis vulgaris pogosto vključuje v formulacije, namenjene dolgoročni podpori ravnovesja v jetrih in črevesju.`
-          : 'Barberry root rich in berberine, traditionally used to support bile flow, lipid and glucose metabolism, and long-term liver–gut balance.',
+          : 'Barberry root (Berberis vulgaris) is traditionally used in European phytotherapy, Ayurveda, and traditional Chinese medicine, particularly as support for liver, gallbladder, and digestive system function. The plant contains a rich set of bioactive compounds, the most important being isoquinoline alkaloids, especially berberine, as well as palmatine, berbamine, and jatrorrhizine, along with flavonoids and phenolic compounds. Berberine is a key active ingredient subject to numerous pharmacological and clinical studies due to its impact on metabolic regulation, liver function, and the regulation of inflammatory processes. Research shows that berberine participates in the modulation of liver enzyme pathways involved in lipid and glucose metabolism, and supports bile secretion. Furthermore, it contributes to reducing oxidative stress and supports the resistance and longevity of liver cells. The bioactive compounds in barberry root also exhibit anti-inflammatory and immunomodulatory properties, which is important during long-term, low-intensity metabolic loads. Because of these properties, Berberis vulgaris is frequently included in formulations designed for the long-term support of balance in the liver and gut.',
       strength: '200mg',
       image: barberryImg,
     },
@@ -67,7 +67,7 @@ const SolutionSection: React.FC = () => {
       detail:
         language === 'slo'
           ? `Haritaki (Terminalia chebula) je sadež, ki vsebuje predvsem polifenole in tanine, ki se v raziskavah najpogosteje povezujejo z antioksidativnim delovanjem ter podporo prebavi.`
-          : 'Fruit rich in polyphenols and tannins, traditionally used for antioxidant support and healthy digestion.',
+          : 'Haritaki (Terminalia chebula) is a fruit containing primarily polyphenols and tannins, which are most frequently associated in research with antioxidant activity and digestive support.',
       strength: '—',
       image: haritakiImg,
     },
@@ -76,7 +76,7 @@ const SolutionSection: React.FC = () => {
       detail:
         language === 'slo'
           ? `Amalaki (Phyllanthus emblica) je sadež, ki vsebuje veliko vitamina C ter polifenole in tanine, med njimi emblicanin A in B ter galno in elagno kislino. Deluje antioksidativno, vitamin C pa hkrati prispeva k normalnemu delovanju imunskega sistema in k normalni tvorbi kolagena.`
-          : 'Vitamin C–rich fruit with polyphenols and tannins, offering antioxidant protection and supporting immunity and collagen formation.',
+          : 'Amalaki (Phyllanthus emblica) is a fruit containing high amounts of vitamin C, as well as polyphenols and tannins, including emblicanin A and B, gallic acid, and ellagic acid. It provides antioxidant benefits, while vitamin C simultaneously contributes to the normal function of the immune system and normal collagen formation.',
       strength: '100mg',
       image: amalakiImg,
     },
@@ -85,7 +85,7 @@ const SolutionSection: React.FC = () => {
       detail:
         language === 'slo'
           ? `Sladki koren (Glycyrrhiza glabra) vsebuje predvsem glicirizin in flavonoide, kot sta liquiritin in glabridin, zato se tradicionalno uporablja za podporo prebavi.`
-          : 'Root rich in glycyrrhizin and flavonoids, traditionally used to soothe and support digestive comfort.',
+          : 'Licorice root (Glycyrrhiza glabra) primarily contains glycyrrhizin and flavonoids, such as liquiritin and glabridin, which is why it is traditionally used to support digestion.',
       strength: '—',
       image: licoriceImg,
     },
@@ -94,7 +94,7 @@ const SolutionSection: React.FC = () => {
       detail:
         language === 'slo'
           ? `Triplat oziroma fenugreek (Trigonella foenum-graecum) vsebuje topne vlaknine galaktomanane, steroidne saponine z diosgeninom, alkaloid trigonelin in aminokislino 4-hidroksiizolevcin, zato podpira prebavo in presnovo. V raziskavah se najpogosteje omenja zaradi vloge vlaknin pri počasnejšem dvigu glukoze po obroku.`
-          : 'Fenugreek seed providing soluble fibers and saponins that support digestion, metabolism, and healthy post-meal glucose response.',
+          : 'Fenugreek (Trigonella foenum-graecum) contains soluble fibers such as galactomannans, steroidal saponins with diosgenin, the alkaloid trigonelline, and the amino acid 4-hydroxyisoleucine; thus, it supports digestion and metabolism. In research, it is most frequently mentioned for the role of its fibers in slowing the rise of glucose after a meal.',
       strength: '—',
       image: fenugreekImg,
     },
