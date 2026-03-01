@@ -3,11 +3,11 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { useLanguage } from '@/hooks/useLanguage';
 import { ChevronDown } from 'lucide-react';
 
-import liverBalanceImg from '@/assets/painpoints/liver-balance.jpg';
-import bitterHerbsImg from '@/assets/painpoints/bitter-herbs.jpg';
-import gutLiverImg from '@/assets/painpoints/gut-liver.jpg';
+import liverBalanceImg from '@/assets/Do you often feel heavy or bloated after a normal meal?.png';
+import bitterHerbsImg from '@/assets/Is your energy crashing in the afternoon?.png';
+import gutLiverImg from '@/assets/Is your metabolism sluggish despite a healthy diet?.png';
 import dailyRitualImg from '@/assets/painpoints/daily-ritual.jpg';
-import traditionalWisdomImg from '@/assets/painpoints/traditional-wisdom.jpg';
+import traditionalWisdomImg from '@/assets/Do you wake up feeling unrefreshed and "stagnant"?.png';
 
 const PainPointsGrid: React.FC = () => {
   const { ref: titleRef, isRevealed: titleRevealed } = useScrollReveal();
@@ -90,6 +90,17 @@ const PainPointsGrid: React.FC = () => {
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
+          <div className="mt-8">
+            <button
+              onClick={() => { const el = document.getElementById('solution'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}
+              className="btn-glow px-8 py-4 bg-brand text-white font-medium text-sm tracking-wide rounded-full hover:bg-brand-600 transition-all duration-300 inline-flex items-center justify-center gap-2"
+            >
+              <span>{t('hero.cta1')}</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="ml-1">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
