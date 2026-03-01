@@ -12,7 +12,7 @@ import ClinicSection from '@/components/heparbion/ClinicSection';
 import TestimonialsSection from '@/components/heparbion/TestimonialsSection';
 import FAQSection from '@/components/heparbion/FAQSection';
 import PricingSection from '@/components/heparbion/PricingSection';
-import SoundCloudPlayer from '@/components/heparbion/SoundCloudPlayer';
+import AudioWidget from '@/components/heparbion/AudioWidget';
 import Footer from '@/components/heparbion/Footer';
 
 const AppLayout: React.FC = () => {
@@ -34,7 +34,7 @@ const AppLayout: React.FC = () => {
         <PricingSection />
       </main>
       <Footer />
-      <SoundCloudPlayer />
+      <AudioWidget />
     </div>
   );
 };
