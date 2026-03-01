@@ -15,20 +15,20 @@ const PricingSection: React.FC = () => {
   const tiers = [
     {
       id: 'heparbion-1', name: t('pricing.tier1.name'), bottles: 1,
-      price: 44.90, originalPrice: 44.90, perBottle: '44.90', savings: 0,
+      price: 36.90, originalPrice: 36.90, perBottle: '36.90', savings: 0,
       features: [t('pricing.feature.capsules1'), t('pricing.feature.formula'), t('pricing.feature.shipping'), t('pricing.feature.cert')],
       cta: t('pricing.tier1.cta'), description: t('pricing.tier1.desc'),
     },
     {
       id: 'heparbion-3', name: t('pricing.tier2.name'), bottles: 3,
-      price: 119.00, originalPrice: 134.70, perBottle: '39.67', savings: 15.70,
+      price: 94.09, originalPrice: 110.70, perBottle: '31.36', savings: 16.61,
       badge: t('pricing.tier2.badge'), popular: true,
       features: [t('pricing.feature.capsules3'), t('pricing.feature.formula'), t('pricing.feature.shippingFree'), t('pricing.feature.cert'), t('pricing.feature.support')],
       cta: t('pricing.tier2.cta'), description: t('pricing.tier2.desc'),
     },
     {
-      id: 'heparbion-6', name: t('pricing.tier3.name'), bottles: 6,
-      price: 209.00, originalPrice: 269.40, perBottle: '34.83', savings: 60.40,
+      id: 'heparbion-5', name: t('pricing.tier3.name'), bottles: 5,
+      price: 138.38, originalPrice: 184.50, perBottle: '27.68', savings: 46.12,
       badge: t('pricing.tier3.badge'),
       features: [t('pricing.feature.capsules6'), t('pricing.feature.formula'), t('pricing.feature.shippingExpress'), t('pricing.feature.cert'), t('pricing.feature.support'), t('pricing.feature.guide')],
       cta: t('pricing.tier3.cta'), description: t('pricing.tier3.desc'),
@@ -51,15 +51,13 @@ const PricingSection: React.FC = () => {
         <div ref={cardsRef} className="grid md:grid-cols-3 gap-5 lg:gap-6">
           {tiers.map((tier, i) => (
             <div key={tier.id}
-              className={`relative rounded-3xl transition-all duration-500 scroll-reveal ${cardsRevealed ? 'revealed' : ''} ${
-                tier.popular ? 'bg-white/[0.1] border-2 border-gold-400/30 shadow-xl shadow-gold-400/5' : 'bg-white/[0.04] border border-white/[0.08]'
-              }`}
+              className={`relative rounded-3xl transition-all duration-500 scroll-reveal ${cardsRevealed ? 'revealed' : ''} ${tier.popular ? 'bg-white/[0.1] border-2 border-gold-400/30 shadow-xl shadow-gold-400/5' : 'bg-white/[0.04] border border-white/[0.08]'
+                }`}
               style={{ transitionDelay: `${i * 150}ms` }}>
               {tier.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className={`inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide ${
-                    tier.popular ? 'bg-gold-400 text-forest' : 'bg-white/10 text-white/70 border border-white/10'
-                  }`}>
+                  <span className={`inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide ${tier.popular ? 'bg-gold-400 text-forest' : 'bg-white/10 text-white/70 border border-white/10'
+                    }`}>
                     {tier.popular && <Star size={12} />}
                     {tier.badge}
                   </span>
@@ -92,11 +90,10 @@ const PricingSection: React.FC = () => {
                   ))}
                 </div>
                 <a href={orderUrl} target="_blank" rel="noopener noreferrer"
-                  className={`w-full py-3.5 rounded-full text-sm font-medium tracking-wide transition-all duration-300 flex items-center justify-center gap-2 ${
-                    tier.popular ? 'btn-glow bg-gold-400 text-forest hover:bg-gold-300' : 'btn-glow bg-white/10 text-white border border-white/10 hover:bg-white/15'
-                  }`}>
+                  className={`w-full py-3.5 rounded-full text-sm font-medium tracking-wide transition-all duration-300 flex items-center justify-center gap-2 ${tier.popular ? 'btn-glow bg-gold-400 text-forest hover:bg-gold-300' : 'btn-glow bg-white/10 text-white border border-white/10 hover:bg-white/15'
+                    }`}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-70">
-                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" /><line x1="3" y1="6" x2="21" y2="6" /><path d="M16 10a4 4 0 01-8 0" />
                   </svg>
                   {tier.cta}
                 </a>
