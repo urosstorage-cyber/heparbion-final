@@ -7,7 +7,7 @@ const ComparisonSection: React.FC = () => {
   const { ref, isRevealed } = useScrollReveal(0.1);
   const { language } = useLanguage();
 
-  const title = language === 'slo' ? 'Kako se Heparbion Plus primerja z ostalimi izdelki na trgu' : 'How Heparbion Plus Compares';
+  const title = language === 'slo' ? 'Kako se Heparbion Plus primerja z ostalimi izdelki na trgu' : 'How Heparbion Plus Compares to Other Products on the Market';
   const eyebrow = language === 'slo' ? 'Primerjalna tabela' : 'Comparison Table';
   const subtitle = language === 'slo'
     ? 'Kako se Heparbion Plus uvršča v širšo sliko?'
@@ -112,7 +112,7 @@ const ComparisonSection: React.FC = () => {
 
   const closingLine = language === 'slo'
     ? 'Heparbion Plus ni za ekstreme. Gre za stalno podporo, tradicionalno modrost in vsakodnevno integracijo. Heparbion Plus ni namenjen ekstremno hitrim rešitvam.'
-    : 'Heparbion Plus is not about extremes. It is about steady support, traditional wisdom, and daily integration.';
+    : 'Heparbion Plus is not about extremes. It is about steady support, traditional wisdom, and daily integration. Heparbion Plus is not intended for extreme quick fixes.';
 
   const ctaTitle = language === 'slo' ? 'Pripravljeni začeti stalnejšo rutino?' : 'Ready to begin a steadier routine?';
   const ctaBtn = language === 'slo' ? 'Začnite' : 'Get Started';

@@ -159,7 +159,7 @@ Unlike substances that unnaturally speed up or inhibit specific pathways, bitter
     'pricing.eyebrow': 'Choose Your Protocol',
     'pricing.h2.1': 'Invest in Your ',
     'pricing.h2.shimmer': 'Liver Health',
-    'pricing.sub': 'Every bundle includes GMP-certified quality and our satisfaction commitment. Free shipping on purchases over €60.',
+    'pricing.sub': 'Every purchase includes GMP-certified quality and our satisfaction guarantee. Free shipping for purchases over €60.',
     'pricing.tier1.name': '60-Day Supply',
     'pricing.tier1.desc': 'Perfect for trying Heparbion Plus for the first time. One bottle lasts 2 months.',
     'pricing.tier1.cta': 'Start Your Journey',
@@ -183,7 +183,7 @@ Unlike substances that unnaturally speed up or inhibit specific pathways, bitter
     'pricing.feature.guide': 'Exclusive wellness guide PDF',
     'pricing.save': 'Save',
     'pricing.perBottle': 'per bottle',
-    'pricing.trustShipping': 'Free EU Shipping',
+    'pricing.trustShipping': 'Free EU Shipping over €60',
     'pricing.trustPayment': 'Secure Payment',
     'pricing.trustReturns': '14-Day Returns',
 
@@ -419,7 +419,7 @@ Sinergijska formula pomeni, da izdelek ne vsebuje samo ene učinkovine, ampak je
     'pricing.feature.guide': 'Ekskluzivni vodnik za počutje (PDF)',
     'pricing.save': 'Prihranite',
     'pricing.perBottle': 'na stekleničko',
-    'pricing.trustShipping': 'Brezplačna EU dostava',
+    'pricing.trustShipping': 'Brezplačna EU dostava nad 60 €',
     'pricing.trustPayment': 'Varno plačilo',
     'pricing.trustReturns': '14-dnevno vračilo',
 
