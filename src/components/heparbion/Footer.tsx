@@ -69,10 +69,16 @@ const Footer: React.FC = () => {
             <p className="text-sm text-white/35 leading-relaxed mb-6">{t('footer.brand.desc')}</p>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-xs text-white/30">
-                <MapPin size={12} /><span>Ayurvedic Health Center, Ljubljana</span>
+                <MapPin size={12} />
+                <a href={language === 'slo' ? 'https://aleksandrakomasz-plus.com/sl/o-nas/' : 'https://aleksandrakomasz-plus.com/about-us/'} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  Ayurvedic Health Center, Ljubljana
+                </a>
               </div>
               <div className="flex items-center gap-2 text-xs text-white/30">
-                <Mail size={12} /><span>info@aleksandrakomasz-plus.com</span>
+                <Mail size={12} />
+                <a href="mailto:info@aleksandrakomasz-plus.com" className="hover:text-white transition-colors">
+                  info@aleksandrakomasz-plus.com
+                </a>
               </div>
             </div>
           </div>
