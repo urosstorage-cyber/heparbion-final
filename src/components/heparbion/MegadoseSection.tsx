@@ -10,8 +10,8 @@ const MegadoseSection: React.FC = () => {
   const title = language === 'slo' ? 'Zakaj ni megadoz' : 'Why There Are No Megadoses';
   const eyebrow = language === 'slo' ? 'Filozofija formule' : 'Formula Philosophy';
   const content = language === 'slo'
-    ? 'Heparbion Plus ne vsebuje megadoz posameznih izoliranih snovi. Namesto agresivnih visokih odmerkov ponujamo sinergijo zelišč — ingver, sladki koren, amalaki in druge — ki so zasnovana prav za varno, vsakodnevno in dolgoročno rutino. Ajurvedska tradicija in sodobna znanost se strinjata: prava moč je v uravnoteženi kombinaciji, ne v ekstremnih količinah posamezne sestavine.'
-    : 'Heparbion Plus doesn\'t contain megadoses of isolated compounds. Instead of aggressive high doses, we offer a synergy of herbs — ginger, licorice root, amalaki and more — designed for safe, daily, long-term use. Ayurvedic tradition and modern science agree: true power lies in balanced combination, not extreme quantities of a single ingredient.';
+    ? 'Heparbion Plus ne vsebuje megadoz posameznih izoliranih snovi. Namesto agresivnih visokih odmerkov ponujamo sinergijo zelišč - Andrographis paniculata, Phyllanthus niruri, Berberis vulgaris, Terminalia chebula in druge - ki so zasnovana prav za varno, vsakodnevno in dolgoročno rutino. Ajurvedska tradicija in sodobna znanost se strinjata: prava moč je v uravnoteženi kombinaciji, ne v ekstremnih količinah posamezne sestavine.'
+    : 'Heparbion Plus doesn\'t contain megadoses of isolated compounds. Instead of aggressive high doses, we offer a synergy of herbs — Andrographis paniculata, Phyllanthus niruri, Berberis vulgaris, Terminalia chebula and more — designed for safe, daily, long-term use. Ayurvedic tradition and modern science agree: true power lies in balanced combination, not extreme quantities of a single ingredient.';
 
   return (
     <section className="relative py-20 md:py-28">

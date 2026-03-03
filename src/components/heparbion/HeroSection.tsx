@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
           <div className="order-2 lg:order-1">
             <div className={`flex items-center gap-2 mb-6 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
               <Leaf size={14} className="text-gold-400" />
-              <span className="text-xs font-medium tracking-wide-elegant text-foreground/50 uppercase">{t('hero.eyebrow')}</span>
+              <span className={`text-xs font-medium tracking-wide-elegant text-foreground/50 ${language === 'slo' ? '' : 'uppercase'}`}>{t('hero.eyebrow')}</span>
             </div>
 
             <h1 className={`font-serif text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-semibold leading-[1.1] text-foreground mb-6 transition-all duration-700 delay-300 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
