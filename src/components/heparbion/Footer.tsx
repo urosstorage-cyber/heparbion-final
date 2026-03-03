@@ -8,12 +8,27 @@ const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
+      const currentEmail = email.trim();
+      try {
+        await fetch("https://api.omnisend.com/v3/contacts", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-API-KEY": "69944699fa60d2b07675dd24-RzkWFvwc5j47dNuLlYx977dMLlTuRQjekqem4m2G36hyEQQwpL"
+          },
+          body: JSON.stringify({
+            identifiers: [{ type: "email", id: currentEmail, channels: { email: { status: "subscribed" } } }],
+            tags: ["newsletter_footer"]
+          })
+        });
+      } catch (err) {
+        console.error('Subscription failed', err);
+      }
       setIsSubscribed(true);
       setEmail('');
-      // V praksi tukaj sledi klic APIja za prijavo na novice
       setTimeout(() => setIsSubscribed(false), 3000);
     }
   };

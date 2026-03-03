@@ -93,14 +93,17 @@ const QuizSection: React.FC = () => {
 
     setEbookError('');
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
     try {
-      await fetch("/", {
+      await fetch("https://api.omnisend.com/v3/contacts", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString()
+        headers: {
+          "Content-Type": "application/json",
+          "X-API-KEY": "69944699fa60d2b07675dd24-RzkWFvwc5j47dNuLlYx977dMLlTuRQjekqem4m2G36hyEQQwpL"
+        },
+        body: JSON.stringify({
+          identifiers: [{ type: "email", id: email, channels: { email: { status: "subscribed" } } }],
+          tags: ["quiz_lead", `result_${result.title.replace(/\s+/g, '_').toLowerCase()}`]
+        })
       });
 
       const pdfUrl = language === 'slo' ? '/ebooks/heparbion-ebook-slo.pdf' : '/ebooks/heparbion-ebook-en.pdf';
@@ -192,10 +195,7 @@ const QuizSection: React.FC = () => {
                   <div className="flex w-full justify-center">
                     {result.isLow ? (
                       <div className="w-full max-w-md">
-                        <form name="ebook-download" method="POST" data-netlify="true" onSubmit={handleEbookSubmit} className="flex flex-row items-center w-full gap-3">
-                          <input type="hidden" name="form-name" value="ebook-download" />
-                          <input type="hidden" name="language" value={language} />
-                          <input type="hidden" name="result" value={result.title} />
+                        <form onSubmit={handleEbookSubmit} className="flex flex-row items-center w-full gap-3">
                           <input
                             type="email"
                             name="email"
