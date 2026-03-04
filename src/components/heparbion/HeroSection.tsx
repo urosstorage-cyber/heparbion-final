@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[85vh] flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-[85vh] flex items-center overflow-hidden">
       <div className="absolute inset-0 mesh-gradient-hero bg-cream-100" />
       <div className="absolute top-20 right-[10%] w-[500px] h-[500px] rounded-full bg-brand/[0.03] blur-3xl" />
       <div className="absolute bottom-20 left-[5%] w-[400px] h-[400px] rounded-full bg-gold-400/[0.04] blur-3xl" />

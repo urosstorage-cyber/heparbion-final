@@ -1,4 +1,5 @@
-import React, { createContext, useState, useCallback } from 'react';
+import React, { createContext, useCallback, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export type Language = 'en' | 'slo';
 
@@ -474,11 +475,39 @@ Sinergijska formula pomeni, da izdelek ne vsebuje samo ene učinkovine, ampak je
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const isSlo = location.pathname.startsWith('/sl');
+  const language: Language = isSlo ? 'slo' : 'en';
+
+  useEffect(() => {
+    // Add missing hreflang tags for SEO
+    const addHreflang = (lang: string, href: string) => {
+      let link = document.querySelector(`link[hreflang="${lang}"]`);
+      if (!link) {
+        link = document.createElement('link');
+        link.setAttribute('rel', 'alternate');
+        link.setAttribute('hreflang', lang);
+        link.setAttribute('href', href);
+        document.head.appendChild(link);
+      }
+    };
+    addHreflang('sl', 'https://heparbionplus.com/sl');
+    addHreflang('en', 'https://heparbionplus.com/');
+  }, []);
+
+  const setLanguage = useCallback((lang: Language) => {
+    if (lang === 'slo') {
+      navigate('/sl');
+    } else {
+      navigate('/');
+    }
+  }, [navigate]);
 
   const toggleLanguage = useCallback(() => {
-    setLanguage((prev) => (prev === 'en' ? 'slo' : 'en'));
-  }, []);
+    setLanguage(language === 'en' ? 'slo' : 'en');
+  }, [language, setLanguage]);
 
   const t = useCallback(
     (key: string): string => {

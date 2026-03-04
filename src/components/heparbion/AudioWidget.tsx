@@ -103,7 +103,7 @@ const AudioWidget: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className={`fixed z-50 transition-all duration-700 w-full md:w-auto left-0 md:left-auto md:right-8 bottom-4 md:bottom-8 px-4 md:px-0 flex justify-center ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+    <div id="podcast" className={`fixed z-50 transition-all duration-700 w-full md:w-auto left-0 md:left-auto md:right-8 bottom-4 md:bottom-8 px-4 md:px-0 flex justify-center ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
       <audio
         ref={audioRef}
         src={audioSrc}

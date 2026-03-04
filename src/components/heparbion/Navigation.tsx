@@ -21,7 +21,7 @@ const Navigation: React.FC = () => {
   };
 
   const navLinks = [
-    { label: t('nav.formula'), id: 'solution' },
+    { label: t('nav.formula'), id: 'ingredients' },
     { label: t('nav.clinic'), id: 'clinic' },
     { label: t('nav.assessment'), id: 'quiz' },
     { label: t('nav.pricing'), id: 'pricing' },
@@ -30,7 +30,7 @@ const Navigation: React.FC = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'glass py-3 shadow-sm' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
-        <button onClick={() => scrollTo('hero')} className="flex items-center gap-3 group">
+        <button onClick={() => scrollTo('home')} className="flex items-center gap-3 group">
           <img src={logoImg} alt="Aleksandra Komasz Plus" className="h-10 md:h-12 w-auto object-contain" />
         </button>
 
@@ -68,7 +68,7 @@ const Navigation: React.FC = () => {
             className="px-2 py-1 rounded-lg bg-foreground/[0.06] text-[10px] font-bold text-foreground/70 tracking-wide">
             {language === 'en' ? 'SLO' : 'EN'}
           </button>
-            <button onClick={() => setMobileOpen(!mobileOpen)} className="p-2 text-foreground">
+          <button onClick={() => setMobileOpen(!mobileOpen)} className="p-2 text-foreground">
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

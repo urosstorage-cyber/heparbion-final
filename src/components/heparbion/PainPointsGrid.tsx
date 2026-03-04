@@ -46,7 +46,7 @@ const PainPointsGrid: React.FC = () => {
     : '5 Reasons Why Ayurvedic Bitter Herbs Matter for Your Liver & Gut';
 
   return (
-    <section id="pain-points" className="relative py-24 md:py-32">
+    <section id="benefits" className="relative py-24 md:py-32">
       <div className="absolute inset-0 mesh-gradient opacity-50" />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div ref={titleRef} className={`text-center mb-16 scroll-reveal ${titleRevealed ? 'revealed' : ''}`}>
@@ -92,7 +92,7 @@ const PainPointsGrid: React.FC = () => {
           </button>
           <div className="mt-8">
             <button
-              onClick={() => { const el = document.getElementById('solution'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}
+              onClick={() => { const el = document.getElementById('ingredients'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}
               className="btn-glow px-8 py-4 bg-brand text-white font-medium text-sm tracking-wide rounded-full hover:bg-brand-600 transition-all duration-300 inline-flex items-center justify-center gap-2"
             >
               <span>{t('hero.cta1')}</span>

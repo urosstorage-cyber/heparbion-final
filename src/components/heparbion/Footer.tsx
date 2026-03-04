@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
 
 
   return (
-    <footer className="relative bg-forest text-white overflow-hidden">
+    <footer id="contact" className="relative bg-forest text-white overflow-hidden">
       <div className="h-[1px] bg-gradient-to-r from-transparent via-gold-400/30 to-transparent" />
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gold-400/5 blur-3xl" />

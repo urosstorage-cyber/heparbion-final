@@ -89,18 +89,18 @@ const PricingSection: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                <a href={
-                  language === 'slo'
+                <button onClick={() => {
+                  window.location.href = language === 'slo'
                     ? `https://aleksandrakomasz-plus.com/sl/zakljucek-nakupa/?add-to-cart=1584&quantity=${tier.bottles}`
                     : `https://aleksandrakomasz-plus.com/zakljucek-nakupa/?add-to-cart=489&quantity=${tier.bottles}`
-                } target="_blank" rel="noopener noreferrer"
+                }}
                   className={`w-full py-3.5 rounded-full text-sm font-medium tracking-wide transition-all duration-300 flex items-center justify-center gap-2 ${tier.popular ? 'btn-glow bg-gold-400 text-forest hover:bg-gold-300' : 'btn-glow bg-white/10 text-white border border-white/10 hover:bg-white/15'
                     }`}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-70">
                     <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" /><line x1="3" y1="6" x2="21" y2="6" /><path d="M16 10a4 4 0 01-8 0" />
                   </svg>
                   {tier.cta}
-                </a>
+                </button>
               </div>
             </div>
           ))}

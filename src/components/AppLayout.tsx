@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navigation from '@/components/heparbion/Navigation';
 import HeroSection from '@/components/heparbion/HeroSection';
 import TrustBar from '@/components/heparbion/TrustBar';
@@ -14,8 +14,22 @@ import FAQSection from '@/components/heparbion/FAQSection';
 import PricingSection from '@/components/heparbion/PricingSection';
 import AudioWidget from '@/components/heparbion/AudioWidget';
 import Footer from '@/components/heparbion/Footer';
+import { useLocation } from 'react-router-dom';
 
 const AppLayout: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const id = location.hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 300);
+    }
+  }, [location]);
   return (
     <div className="min-h-screen bg-cream-100 overflow-x-hidden">
       <Navigation />
