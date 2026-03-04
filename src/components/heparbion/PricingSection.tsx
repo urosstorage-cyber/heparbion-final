@@ -12,6 +12,22 @@ const PricingSection: React.FC = () => {
     ? 'https://aleksandrakomasz-plus.com/sl/izdelek/heparbion-plus/'
     : 'https://aleksandrakomasz-plus.com/product/heparbion-plus/';
 
+  const handleBuyClick = (tier: any) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-17992434619/dkFlCJ6Q5YIcELuHu4ND',
+        'value': tier.price,
+        'currency': 'EUR'
+      });
+    }
+
+    const url = language === 'slo'
+      ? `https://aleksandrakomasz-plus.com/sl/zakljucek-nakupa/?add-to-cart=1584&quantity=${tier.bottles}`
+      : `https://aleksandrakomasz-plus.com/zakljucek-nakupa/?add-to-cart=489&quantity=${tier.bottles}`;
+
+    window.location.href = url;
+  };
+
   const tiers = [
     {
       id: 'heparbion-1', name: t('pricing.tier1.name'), bottles: 1,
@@ -89,11 +105,7 @@ const PricingSection: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                <button onClick={() => {
-                  window.location.href = language === 'slo'
-                    ? `https://aleksandrakomasz-plus.com/sl/zakljucek-nakupa/?add-to-cart=1584&quantity=${tier.bottles}`
-                    : `https://aleksandrakomasz-plus.com/zakljucek-nakupa/?add-to-cart=489&quantity=${tier.bottles}`
-                }}
+                <button onClick={() => handleBuyClick(tier)}
                   className={`w-full py-3.5 rounded-full text-sm font-medium tracking-wide transition-all duration-300 flex items-center justify-center gap-2 ${tier.popular ? 'btn-glow bg-gold-400 text-forest hover:bg-gold-300' : 'btn-glow bg-white/10 text-white border border-white/10 hover:bg-white/15'
                     }`}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-70">
