@@ -47,10 +47,26 @@ const QuizSection: React.FC = () => {
   const handleNext = () => {
     if (selectedOption === null) return;
     setAnswers({ ...answers, [currentQ]: selectedOption });
+
+    // Track question answer
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'quiz_interaction', {
+        'question': `q${currentQ + 1}`,
+        'answer': selectedOption
+      });
+    }
+
     if (currentQ < questions.length - 1) {
       setCurrentQ(currentQ + 1);
       setSelectedOption(answers[currentQ + 1] || null);
     } else {
+      // Track quiz completion
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'quiz_interaction', {
+          'question': 'completed',
+          'answer': 'quiz_finished'
+        });
+      }
       setShowResult(true);
     }
   };
