@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           },
           body: JSON.stringify({
             identifiers: [{ type: "email", id: currentEmail, channels: { email: { status: "subscribed" } } }],
-            tags: ["newsletter_footer"]
+            tags: ["newsletter_footer", language === 'slo' ? 'LP_Heparbion_SLO' : 'LP_Heparbion_EN']
           })
         });
       } catch (err) {

@@ -68,7 +68,7 @@ const SolutionSection: React.FC = () => {
         language === 'slo'
           ? `Haritaki (Terminalia chebula) je sadež, ki vsebuje predvsem polifenole in tanine, ki se v raziskavah najpogosteje povezujejo z antioksidativnim delovanjem ter podporo prebavi.`
           : 'Haritaki (Terminalia chebula) is a fruit containing primarily polyphenols and tannins, which are most frequently associated in research with antioxidant activity and digestive support.',
-      strength: '—',
+      strength: '50mg',
       image: haritakiImg,
     },
     {
@@ -77,7 +77,7 @@ const SolutionSection: React.FC = () => {
         language === 'slo'
           ? `Amalaki (Phyllanthus emblica) je sadež, ki vsebuje veliko vitamina C ter polifenole in tanine, med njimi emblicanin A in B ter galno in elagno kislino. Deluje antioksidativno, vitamin C pa hkrati prispeva k normalnemu delovanju imunskega sistema in k normalni tvorbi kolagena.`
           : 'Amalaki (Phyllanthus emblica) is a fruit containing high amounts of vitamin C, as well as polyphenols and tannins, including emblicanin A and B, gallic acid, and ellagic acid. It provides antioxidant benefits, while vitamin C simultaneously contributes to the normal function of the immune system and normal collagen formation.',
-      strength: '100mg',
+      strength: '50mg',
       image: amalakiImg,
     },
     {
@@ -86,7 +86,7 @@ const SolutionSection: React.FC = () => {
         language === 'slo'
           ? `Sladki koren (Glycyrrhiza glabra) vsebuje predvsem glicirizin in flavonoide, kot sta liquiritin in glabridin, zato se tradicionalno uporablja za podporo prebavi.`
           : 'Licorice root (Glycyrrhiza glabra) primarily contains glycyrrhizin and flavonoids, such as liquiritin and glabridin, which is why it is traditionally used to support digestion.',
-      strength: '—',
+      strength: '100mg',
       image: licoriceImg,
     },
     {
@@ -95,7 +95,7 @@ const SolutionSection: React.FC = () => {
         language === 'slo'
           ? `Triplat oziroma fenugreek (Trigonella foenum-graecum) vsebuje topne vlaknine galaktomanane, steroidne saponine z diosgeninom, alkaloid trigonelin in aminokislino 4-hidroksiizolevcin, zato podpira prebavo in presnovo. V raziskavah se najpogosteje omenja zaradi vloge vlaknin pri počasnejšem dvigu glukoze po obroku.`
           : 'Fenugreek (Trigonella foenum-graecum) contains soluble fibers such as galactomannans, steroidal saponins with diosgenin, the alkaloid trigonelline, and the amino acid 4-hydroxyisoleucine; thus, it supports digestion and metabolism. In research, it is most frequently mentioned for the role of its fibers in slowing the rise of glucose after a meal.',
-      strength: '—',
+      strength: '50mg',
       image: fenugreekImg,
     },
     {
@@ -104,7 +104,7 @@ const SolutionSection: React.FC = () => {
         language === 'slo'
           ? `Kurkuma (Curcuma longa) vsebuje kurkuminoide, predvsem kurkumin, demetoksikurkumin in bisdemetoksikurkumin, ter hlapna eterična olja, med katerimi so pomembni turmeroni. V formulo je vključena zaradi antioksidativnih in protivnetnih lastnosti.`
           : 'Turmeric root with curcuminoids and essential oils, included for its antioxidant and inflammation-balancing properties.',
-      strength: '—',
+      strength: '50mg',
       image: turmericImg,
     },
     {
@@ -113,7 +113,7 @@ const SolutionSection: React.FC = () => {
         language === 'slo'
           ? `Ingver (Zingiber officinale) vsebuje predvsem gingerole in shogaole ter zingeron, poleg tega pa eterična olja, ki mu dajejo značilen aromatičen profil. Zaradi teh rastlinskih spojin se tradicionalno uporablja za podporo prebavnemu udobju in občutku toplote, posebej kadar se po obrokih želi lažji, bolj urejen ritem.`
           : 'Warming root with gingerols and shogaols, traditionally used to support digestive comfort and post‑meal lightness.',
-      strength: '100mg',
+      strength: '50mg',
       image: gingerImg,
     },
     {

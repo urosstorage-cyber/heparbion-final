@@ -118,7 +118,7 @@ const QuizSection: React.FC = () => {
         },
         body: JSON.stringify({
           identifiers: [{ type: "email", id: email, channels: { email: { status: "subscribed" } } }],
-          tags: ["quiz_lead", `result_${result.title.replace(/\s+/g, '_').toLowerCase()}`]
+          tags: ["quiz_lead", `result_${result.title.replace(/\s+/g, '_').toLowerCase()}`, language === 'slo' ? 'LP_Heparbion_SLO' : 'LP_Heparbion_EN']
         })
       });
 
