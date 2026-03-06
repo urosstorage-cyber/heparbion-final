@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { useLanguage } from '@/hooks/useLanguage';
 import { ClipboardCheck, ArrowRight, ArrowLeft, RotateCcw, Download } from 'lucide-react';
+import SubscriptionModal from './SubscriptionModal';
 
 const QuizSection: React.FC = () => {
   const { ref, isRevealed } = useScrollReveal(0.15);
@@ -17,6 +18,7 @@ const QuizSection: React.FC = () => {
 
   const [ebookEmail, setEbookEmail] = useState('');
   const [ebookError, setEbookError] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   const questions = [
     { text: t('quiz.q1'), options: [{ label: t('quiz.q1a'), value: 'a' }, { label: t('quiz.q1b'), value: 'b' }, { label: t('quiz.q1c'), value: 'c' }] },
@@ -130,6 +132,7 @@ const QuizSection: React.FC = () => {
       link.click();
       document.body.removeChild(link);
 
+      setShowModal(true);
       setEbookEmail('');
     } catch (err) {
       console.error('Submission failed', err);
@@ -211,7 +214,7 @@ const QuizSection: React.FC = () => {
                   <div className="flex w-full justify-center">
                     {result.isLow ? (
                       <div className="w-full max-w-md">
-                        <form onSubmit={handleEbookSubmit} className="flex flex-row items-center w-full gap-3">
+                        <form onSubmit={handleEbookSubmit} className="flex flex-col sm:flex-row items-center w-full gap-3">
                           <input
                             type="email"
                             name="email"
@@ -223,7 +226,7 @@ const QuizSection: React.FC = () => {
                           />
                           <button
                             type="submit"
-                            className="btn-glow px-6 py-3.5 bg-brand text-white text-sm font-medium tracking-wide rounded-full flex items-center justify-center gap-2 whitespace-nowrap"
+                            className="btn-glow w-full sm:w-auto px-6 py-3.5 bg-brand text-white text-sm font-medium tracking-wide rounded-full flex items-center justify-center gap-2 whitespace-nowrap"
                           >
                             <Download size={16} className="opacity-70" />
                             {language === 'slo' ? 'Prenesi brezplačen e-priročnik' : 'Download Free E-book'}
@@ -251,10 +254,11 @@ const QuizSection: React.FC = () => {
             )}
           </div>
 
-          {/* Legal disclaimer */}
           <p className="text-sm text-foreground/50 text-center mt-6 max-w-lg mx-auto leading-relaxed">{legalText}</p>
         </div>
       </div>
+
+      <SubscriptionModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </section>
   );
 };

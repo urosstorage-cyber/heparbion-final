@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Mail, MapPin } from 'lucide-react';
 import logoImg from '@/assets/aleksandra_komasz_plus_logo.svg';
+import SubscriptionModal from './SubscriptionModal';
 
 const Footer: React.FC = () => {
   const { t, language } = useLanguage();
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,6 +29,7 @@ const Footer: React.FC = () => {
       } catch (err) {
         console.error('Subscription failed', err);
       }
+      setShowModal(true);
       setIsSubscribed(true);
       setEmail('');
       setTimeout(() => setIsSubscribed(false), 3000);
@@ -136,6 +139,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <SubscriptionModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </footer>
   );
 };

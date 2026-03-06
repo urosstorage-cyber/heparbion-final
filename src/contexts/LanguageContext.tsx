@@ -235,6 +235,16 @@ Unlike substances that unnaturally speed up or inhibit specific pathways, bitter
     'cart.onThisOrder': 'EUR on this order',
     'cart.bottle': 'bottle',
     'cart.bottles': 'bottles',
+
+    // Modal
+    'modal.title': 'Thank you for joining the Aleksandra Komasz Plus community.',
+    'modal.p1': 'From now on, we will occasionally send you exclusive content, special benefits, and simple, practical tips for a more balanced everyday life and Ayurvedic lifestyle.',
+    'modal.p2': 'Just thoughtful pieces of inspiration and support that we share with members of our Aleksandra Komasz Plus community, to help you maintain balance, energy, and wellbeing every day.',
+    'modal.p3': 'If you are interested, we invite you to peek into our web shop and check out products that can support your wellbeing.',
+    'modal.btn': 'Visit the website',
+    'modal.signoff1': 'Warm regards,',
+    'modal.signoff2': 'the Aleksandra Komasz Plus team',
+    'modal.ps': 'P.S.: Our messages can occasionally land in promotions or spam. To always stay up to date with tips, promotions, and news, please move this message to your primary inbox and mark it as not spam.',
   },
   slo: {
     // Nav
@@ -471,6 +481,16 @@ Sinergijska formula pomeni, da izdelek ne vsebuje samo ene učinkovine, ampak je
     'cart.onThisOrder': 'EUR pri tem naročilu',
     'cart.bottle': 'steklenička',
     'cart.bottles': 'stekleničk',
+
+    // Modal
+    'modal.title': 'Hvala, ker ste se pridružili skupnosti Aleksandra Komasz Plus.',
+    'modal.p1': 'Od zdaj naprej vam bomo občasno pošiljali ekskluzivne vsebine, posebne ugodnosti ter preproste, praktične nasvete za bolj uravnotežen vsakdan in ajurvedski življenjski slog.',
+    'modal.p2': 'Le premišljeni koščki navdiha in podpore, ki jih delimo s člani naše skupnosti Aleksandra Komasz Plus, da vam pomagajo ohranjati ravnovesje, energijo in dobro počutje vsak dan.',
+    'modal.p3': 'Če vas zanima, vas vabimo, da pokukate v našo spletno trgovino in preverite izdelke, ki lahko podprejo vaše dobro počutje.',
+    'modal.btn': 'Obiščite spletno stran',
+    'modal.signoff1': 'Topel pozdrav,',
+    'modal.signoff2': 'ekipa Aleksandra Komasz Plus',
+    'modal.ps': 'P. S.: Naša sporočila lahko občasno zaidejo med promocije ali neželeno pošto. Da boste vedno na tekočem z nasveti, promocijami in novostmi, vas prosimo, da to sporočilo premaknete v glavni nabiralnik in označite, da ni neželena pošta.',
   },
 };
 
