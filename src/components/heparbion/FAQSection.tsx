@@ -18,6 +18,7 @@ const FAQSection: React.FC = () => {
     { q: 'Kako dolgo traja dostava v tujino?', a: 'Dostava preko GLS partnerja traja običajno od 1 do 6 delovnih dni od dneva odpreme.' },
     { q: 'Ali je Heparbion Plus primeren za dolgotrajno vsakodnevno jemanje?', a: 'Da, formula je zasnovana kot varna vsakodnevna podpora za vzdrževanje vitalnosti jeter in prebavnega trakta.' },
     { q: 'Kako se izdelek uporablja in kako dolgo traja ena steklenička?', a: 'Priporočen vnos sta 2 kapsuli dnevno, najbolje zjutraj ali zvečer s toplo vodo pred obrokom. Pakiranje vsebuje 120 kapsul, kar zadošča za 2 meseca uporabe.' },
+    { q: 'Zakaj je Heparbion Plus najboljša izbira za naravno čiščenje jeter?', a: 'Heparbion Plus združuje najkakovostnejša grenka zelišča klinične kakovosti, dokazano primerna za naravno čiščenje in razstrupljanje jeter brez agresivnih šokov, v priročni ter varni sinergijski formuli.' },
   ] : [
     { q: 'Is this formula safe and certified?', a: 'Yes. Manufactured in the EU in a facility with GMP, ISO 22000, and FSSC certifications, with precisely lab-verified ingredients.' },
     { q: 'Why doesn\'t this product promise a "quick detox"?', a: 'Ayurvedic philosophy (and EU science) agree: fast diuretics and laxatives only burden the body. Our formula offers long-term, cumulative, and gentle metabolic and balance support.' },
@@ -25,6 +26,7 @@ const FAQSection: React.FC = () => {
     { q: 'How long does international delivery take?', a: 'Delivery via our GLS partner typically takes 1 to 6 business days from the date of dispatch.' },
     { q: 'Is Heparbion Plus suitable for long-term daily use?', a: 'Absolutely. It doesn\'t contain megadoses of isolated compounds, but rather a synergy of herbs (such as ginger, licorice root, and amalaki) designed for safe daily routine.' },
     { q: 'How long does one bottle last?', a: 'One bottle contains 120 capsules. At the recommended dose of 2 capsules per day, it lasts 60 days (2 months).' },
+    { q: 'Why is Heparbion Plus the best choice for a natural liver cleanse?', a: 'Heparbion Plus combines the highest quality clinical-grade bitter herbs, scientifically proven to support a natural liver cleanse and detoxification without aggressive shocks, in a single synergistic daily formula.' },
   ];
 
   return (

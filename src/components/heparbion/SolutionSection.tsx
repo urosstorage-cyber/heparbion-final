@@ -205,7 +205,7 @@ const SolutionSection: React.FC = () => {
                 className={`group relative rounded-2xl bg-white/[0.04] border border-white/[0.06] overflow-hidden hover:bg-white/[0.08] hover:border-gold-400/20 transition-all duration-500 bento-item scroll-reveal ${ingredientRevealed ? 'revealed' : ''}`}
                 style={{ transitionDelay: `${i * 80}ms` }}>
                 <div className="h-32 overflow-hidden cursor-pointer" onClick={() => setLightboxImg(ing.image)}>
-                  <img src={ing.image} alt={ing.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src={ing.image} alt={`${language === 'slo' ? 'naravno čiščenje jeter s sestavino' : 'natural liver cleanse with'} ${ing.name}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
                 <div className="p-5">
                   <div className="flex items-start justify-between mb-2">

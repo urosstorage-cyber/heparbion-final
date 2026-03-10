@@ -24,10 +24,10 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     'hero.eyebrow': 'Ayurvedic Botanical Formula',
-    'hero.h1.1': 'When Your Liver Is ',
-    'hero.h1.italic': 'Overloaded',
-    'hero.h1.2': ', Your Body Simply ',
-    'hero.h1.underline': 'Holds On',
+    'hero.h1.1': 'When Your Body Needs a ',
+    'hero.h1.italic': 'Natural Cleanse ',
+    'hero.h1.2': 'and ',
+    'hero.h1.underline': 'Liver Detox',
     'hero.h1.3': '\u00a0.',
     'hero.sub': 'An original botanical formula from the renowned Ayurvedic clinic of Aleksandra Komasz. A synergy of traditional bitter herbs designed for daily inner balance, without aggressive "detox" shocks.',
     'hero.cta1': 'SUPPORT YOUR LIVER',
@@ -256,10 +256,10 @@ Unlike substances that unnaturally speed up or inhibit specific pathways, bitter
 
     // Hero
     'hero.eyebrow': 'Ajurvedska botanična formula',
-    'hero.h1.1': 'Ko so vaša jetra ',
-    'hero.h1.italic': 'preobremenjena',
-    'hero.h1.2': ', telo preprosto ',
-    'hero.h1.underline': 'zadržuje',
+    'hero.h1.1': 'Ko vaše telo potrebuje ',
+    'hero.h1.italic': 'naravno čiščenje ',
+    'hero.h1.2': 'in ',
+    'hero.h1.underline': 'razstrupljanje jeter',
     'hero.h1.3': '\u00a0.',
     'hero.sub': 'Originalna botanična formula iz priznane ajurvedske klinike Aleksandre Komasz. Sinergija tradicionalnih grenkih zelišč, zasnovana za vsakodnevno notranje ravnovesje, brez agresivnih "detox" šokov.',
     'hero.cta1': 'PODPRITE SVOJA JETRA',
